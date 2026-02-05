@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     description: "A 501(c)(3) nonprofit supporting education, nutrition, and community development in Jamaica.",
     images: ["/images/hero/children-hero.webp"],
   },
-  metadataBase: new URL("https://theannhewanfoundation.org"),
+  metadataBase: new URL("https://ann-hewan-foundation.vercel.app"),
   robots: {
     index: true,
     follow: true,

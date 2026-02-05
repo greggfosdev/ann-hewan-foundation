@@ -4,8 +4,8 @@ export function OrganizationJsonLd() {
     "@type": "NonProfit",
     name: "The Ann Hewan Foundation",
     alternateName: "Ann Hewan Foundation",
-    url: "https://theannhewanfoundation.org",
-    logo: "https://theannhewanfoundation.org/images/logo.webp",
+    url: "https://ann-hewan-foundation.vercel.app",
+    logo: "https://ann-hewan-foundation.vercel.app/images/logo.webp",
     description:
       "A 501(c)(3) nonprofit organization supporting education, nutrition, and community development in Goodwill, St. James, Jamaica.",
     foundingDate: "2010",
@@ -31,7 +31,7 @@ export function OrganizationJsonLd() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "donations",
-      url: "https://theannhewanfoundation.org/donate",
+      url: "https://ann-hewan-foundation.vercel.app/donate",
     },
     knowsAbout: [
       "Child nutrition",
@@ -61,7 +61,7 @@ export function DonatePageJsonLd() {
       "@type": "NonProfit",
       name: "The Ann Hewan Foundation",
     },
-    url: "https://theannhewanfoundation.org/donate",
+    url: "https://ann-hewan-foundation.vercel.app/donate",
   };
 
   return (
