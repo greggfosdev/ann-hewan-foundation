@@ -10,6 +10,7 @@ const navigation = [
   { name: "Programs", href: "/programs" },
   { name: "Impact", href: "/impact" },
   { name: "Get Involved", href: "/get-involved" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {

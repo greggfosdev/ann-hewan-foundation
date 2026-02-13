@@ -132,8 +132,9 @@ export function Footer() {
             </p>
             <div className="text-sm text-gray-600">
               <p className="font-medium text-gray-900">Contact Us</p>
-              <p className="mt-2">P.O. Box 720125</p>
-              <p>Orlando, FL 32872</p>
+              <p className="mt-2">11954 Narcoossee Rd</p>
+              <p>Suite 2 PBM 246</p>
+              <p>Orlando, FL 32832</p>
               <p className="mt-2">
                 <a
                   href="tel:+14075803469"

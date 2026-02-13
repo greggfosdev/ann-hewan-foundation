@@ -60,10 +60,11 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-900">Mailing Address</p>
+                    <p className="font-medium text-gray-900">Address</p>
                     <p className="mt-1 text-sm text-gray-600">
-                      P.O. Box 720125<br />
-                      Orlando, FL 32872<br />
+                      11954 Narcoossee Rd<br />
+                      Suite 2 PBM 246<br />
+                      Orlando, FL 32832<br />
                       United States
                     </p>
                   </div>
@@ -117,10 +118,10 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
                     <a
-                      href="mailto:info@theannhewanfoundation.com"
+                      href="mailto:info@theannhewanfoundation.org"
                       className="mt-1 block text-sm text-gold-dark hover:text-gold transition-colors"
                     >
-                      info@theannhewanfoundation.com
+                      info@theannhewanfoundation.org
                     </a>
                   </div>
                 </div>

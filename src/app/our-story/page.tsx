@@ -337,14 +337,6 @@ export default function OurStoryPage() {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gold/30 hover:bg-gold-dark hover:shadow-gold/40 transition-all"
-            >
-              Contact Us <span aria-hidden="true">→</span>
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -424,6 +416,14 @@ export default function OurStoryPage() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mt-12 text-center">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gold/30 hover:bg-gold-dark hover:shadow-gold/40 transition-all"
+            >
+              Contact Us <span aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
       </section>
