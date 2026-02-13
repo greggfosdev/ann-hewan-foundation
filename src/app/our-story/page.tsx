@@ -5,7 +5,7 @@ import { Timeline } from "@/components/sections/Timeline";
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "Learn about Ann Hewan, the Goodwill community, and the foundation's mission to uplift families in Jamaica.",
+    "Learn about Ann Hewan, Goodwill and the surrounding communities, and the foundation's mission to uplift families in Jamaica.",
 };
 
 export default function OurStoryPage() {
@@ -24,7 +24,7 @@ export default function OurStoryPage() {
             <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-gold to-coral" />
             <p className="mt-6 text-lg leading-8 text-gray-600">
               A legacy of love, community, and unwavering commitment to the
-              children of Goodwill.
+              children of Goodwill and surrounding communities.
             </p>
           </div>
         </div>
@@ -236,7 +236,7 @@ export default function OurStoryPage() {
         </div>
       </section>
 
-      {/* The Goodwill Community */}
+      {/* The Communities We Serve */}
       <section className="bg-sand py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
@@ -244,26 +244,26 @@ export default function OurStoryPage() {
               Where We Serve
             </p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              The Goodwill Community
+              Our Communities
             </h2>
             <div className="mt-6 space-y-6 text-lg leading-8 text-gray-600">
               <p>
-                Goodwill is a vibrant community nestled in the parish of St.
-                James, Jamaica. Like many rural Jamaican communities, Goodwill
-                faces economic challenges that can make daily life difficult for
-                families.
+                Goodwill, Davis Pen, Chatham, Blyston, Edenvale, and Johnson
+                Hill are vibrant communities nestled in the parish of St. James,
+                Jamaica. Like many rural Jamaican communities, they face economic
+                challenges that can make daily life difficult for families.
               </p>
               <p>
-                Despite these challenges, the people of Goodwill are resilient,
-                hardworking, and deeply committed to their children&apos;s
-                futures. The community is rich in culture, spirit, and the
-                determination to build a better tomorrow.
+                Despite these challenges, the people of these communities are
+                resilient, hardworking, and deeply committed to their
+                children&apos;s futures. They are rich in culture, spirit, and
+                the determination to build a better tomorrow.
               </p>
               <p>
                 Our foundation works alongside community members—not as
                 outsiders, but as partners. We believe that sustainable change
                 comes from within, and our role is to provide resources and
-                support while the community leads the way.
+                support while the communities lead the way.
               </p>
             </div>
           </div>
@@ -344,6 +344,86 @@ export default function OurStoryPage() {
             >
               Contact Us <span aria-hidden="true">→</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements & Recognition */}
+      <section className="bg-cream py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold">
+              Honors
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Achievements & Recognition
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Recognition that reflects our foundation&apos;s unwavering commitment to
+              empowering communities and promoting cultural heritage.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-16 max-w-5xl">
+            {/* Congressional Recognition */}
+            <div className="rounded-2xl bg-white p-8 shadow-lg ring-1 ring-gray-900/5 sm:p-12">
+              <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:gap-12">
+                {/* Text Content */}
+                <div className="flex-1">
+                  <div className="inline-flex items-center gap-2 rounded-full bg-gold/10 px-4 py-1.5 text-sm font-medium text-gold-dark mb-4">
+                    Congressional Record &middot; June 2025
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">
+                    Distinguished Leader in Central Florida
+                  </h3>
+                  <p className="mt-4 text-lg text-gray-600">
+                    Founder and President Edgar &ldquo;Pete&rdquo; Peters was honored
+                    as a Distinguished Leader in Central Florida for Caribbean Heritage
+                    Month by Congressman Darren Soto.
+                  </p>
+                  <p className="mt-4 text-gray-600">
+                    Pete was officially recognized and awarded in the Congressional
+                    Record, honoring his remarkable impact in Central Florida and
+                    beyond. His dedication to empowering Caribbean communities and
+                    promoting cultural heritage through the Ann Hewan Foundation earned
+                    him this distinguished recognition from the United States House of
+                    Representatives.
+                  </p>
+                </div>
+
+                {/* Photo - Pete with Congressman Soto */}
+                <div className="w-full lg:w-2/5 flex-shrink-0">
+                  <div className="overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/5">
+                    <img
+                      src="/images/recognition/pete-congressman-soto.webp"
+                      alt="Edgar Pete Peters receiving recognition from Congressman Darren Soto at the Caribbean Heritage Month event"
+                      className="w-full object-cover"
+                    />
+                  </div>
+                  <p className="mt-3 text-center text-sm text-gray-500">
+                    Edgar &ldquo;Pete&rdquo; Peters with Congressman Darren Soto
+                  </p>
+                </div>
+              </div>
+
+              {/* Documents */}
+              <div className="mt-10 grid gap-6 sm:grid-cols-2">
+                <div className="overflow-hidden rounded-xl shadow-md ring-1 ring-gray-900/5">
+                  <img
+                    src="/images/recognition/congressional-record.webp"
+                    alt="Congressional Record honoring Edgar Pete Peters as a Distinguished Leader in Central Florida for Caribbean Heritage Month"
+                    className="w-full object-cover"
+                  />
+                </div>
+                <div className="overflow-hidden rounded-xl shadow-md ring-1 ring-gray-900/5">
+                  <img
+                    src="/images/recognition/congressional-invitation.webp"
+                    alt="Official invitation letter from Congressman Darren Soto for the Caribbean Heritage Month event"
+                    className="w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

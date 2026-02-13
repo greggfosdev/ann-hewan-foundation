@@ -5,13 +5,13 @@ import { AnnualReports } from "@/components/sections/AnnualReports";
 export const metadata: Metadata = {
   title: "Impact",
   description:
-    "See the measurable impact of The Ann Hewan Foundation on the Goodwill community.",
+    "See the measurable impact of The Ann Hewan Foundation on Goodwill and surrounding communities.",
 };
 
 const impactStats = [
   { label: "Children Fed Daily", value: "150+", description: "Through our Breakfast Project", color: "gold" },
   { label: "Students Supported", value: "300+", description: "With school supplies and uniforms", color: "ocean" },
-  { label: "Years of Service", value: "15", description: "Serving the Goodwill community", color: "coral" },
+  { label: "Years of Service", value: "15", description: "Serving Goodwill & surrounding communities", color: "coral" },
   { label: "Meals Served Annually", value: "25,000+", description: "Nutritious breakfasts", color: "gold" },
   { label: "Families Reached", value: "100+", description: "Direct community support", color: "ocean" },
   { label: "Volunteers Engaged", value: "25+", description: "Dedicated community members", color: "coral" },
@@ -38,7 +38,7 @@ export default function ImpactPage() {
             </h1>
             <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-gold to-coral" />
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Transparent, measurable change in the lives of families in Goodwill.
+              Transparent, measurable change in the lives of families in Goodwill and surrounding communities.
             </p>
           </div>
         </div>
@@ -176,6 +176,67 @@ export default function ImpactPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Our Partners */}
+      <section className="bg-sand py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold">
+              Working Together
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Our Partners
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Organizations working alongside us to uplift our communities.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-8 lg:grid-cols-4">
+            {[
+              {
+                name: "Goodwill School Alumni Foundation",
+                logo: "/images/partners/gsaf.jpg",
+                href: "https://gsafoundation.com/",
+              },
+              {
+                name: "Jamaica Tours Limited",
+                logo: "/images/partners/jtl.webp",
+                href: "https://jamaicatoursltd.com/",
+              },
+              {
+                name: "Giving 4 Hope",
+                logo: "/images/partners/giving4hope.webp",
+                href: "https://www.giving4hope.org/",
+              },
+              {
+                name: "Ray Peeples Ministries",
+                logo: "/images/partners/rpm.webp",
+                href: "https://www.raypeeples.com/",
+              },
+            ].map((partner) => (
+              <a
+                key={partner.name}
+                href={partner.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center group"
+              >
+                <div className="flex h-32 w-full items-center justify-center rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5 transition-shadow group-hover:shadow-md group-hover:ring-gold/30">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-24 max-w-full object-contain"
+                  />
+                </div>
+                <p className="mt-3 text-center text-sm font-medium text-gray-700 group-hover:text-gold-dark transition-colors">
+                  {partner.name}
+                </p>
+              </a>
+            ))}
           </div>
         </div>
       </section>

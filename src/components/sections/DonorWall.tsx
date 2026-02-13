@@ -25,7 +25,7 @@ export function DonorWall() {
           </h2>
           <p className="mt-4 text-lg text-gray-600">
             Every donation, big or small, makes a difference in the lives of
-            children and families in Goodwill.
+            children and families in Goodwill and surrounding communities.
           </p>
         </div>
 

@@ -39,7 +39,7 @@ const milestones = [
     year: "2026",
     title: "15 Years of Service",
     description:
-      "Celebrating 15 years of uplifting the Goodwill community with over 300 students supported annually.",
+      "Celebrating 15 years of uplifting Goodwill, Davis Pen, Chatham, Blyston, Edenvale, and Johnson Hill with over 300 students supported annually.",
   },
 ];
 

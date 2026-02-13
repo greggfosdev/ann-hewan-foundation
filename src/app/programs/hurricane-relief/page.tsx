@@ -198,7 +198,7 @@ export default function HurricaneReliefPage() {
               <h2 className="text-2xl font-bold text-gray-900">The Reality</h2>
               <p className="mt-4 text-lg text-gray-600">
                 Jamaica lies in the hurricane belt, and communities like
-                Goodwill are particularly vulnerable. When hurricanes strike,
+                Goodwill and surrounding communities are particularly vulnerable. When hurricanes strike,
                 they can destroy homes, crops, and livelihoods in hours.
               </p>
               <p className="mt-4 text-lg text-gray-600">

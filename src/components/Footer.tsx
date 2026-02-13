@@ -126,7 +126,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm leading-6 text-gray-600">
-              A 501(c)(3) nonprofit uplifting the Goodwill community in St.
+              A 501(c)(3) nonprofit uplifting Goodwill and surrounding communities in St.
               James, Jamaica through education, nutrition, and sustainable
               development.
             </p>

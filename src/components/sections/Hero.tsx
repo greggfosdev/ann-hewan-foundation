@@ -19,8 +19,8 @@ const stats = [
 ];
 
 export function Hero({
-  title = "Uplifting the Goodwill Community",
-  subtitle = "The Ann Hewan Foundation is dedicated to improving lives in Goodwill, St. James, Jamaica through education, nutrition, and sustainable community development.",
+  title = "Uplifting Goodwill & Surrounding Communities",
+  subtitle = "The Ann Hewan Foundation is dedicated to improving lives in Goodwill, Davis Pen, Chatham, Blyston, Edenvale, and Johnson Hill in St. James, Jamaica through education, nutrition, and sustainable community development.",
   ctaText = "Donate Now",
   ctaHref = "/donate",
   secondaryCtaText = "Watch Our Story",

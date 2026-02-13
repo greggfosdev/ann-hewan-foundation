@@ -10,7 +10,7 @@ const programs = [
   {
     name: "The Breakfast Project",
     description:
-      "Our flagship program ensures that no child in Goodwill goes to school hungry. We provide nutritious morning meals to over 150 children daily.",
+      "Our flagship program ensures that no child in Goodwill and surrounding communities goes to school hungry. We provide nutritious morning meals to over 150 children daily.",
     href: "/programs/breakfast-project",
     stats: { value: "150+", label: "Children Fed Daily" },
     color: "gold",
@@ -84,7 +84,7 @@ export default function ProgramsPage() {
             <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-gold to-coral" />
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Making a lasting difference through targeted initiatives that
-              address the real needs of the Goodwill community. Click on any
+              address the real needs of Goodwill and surrounding communities. Click on any
               program to learn more.
             </p>
           </div>

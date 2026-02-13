@@ -259,6 +259,7 @@ export default function ContactPage() {
                       <option value="volunteer">Volunteering</option>
                       <option value="donate">Donations</option>
                       <option value="partner">Partnership</option>
+                      <option value="financials">Request Financial Reports</option>
                       <option value="media">Media Inquiry</option>
                       <option value="other">Other</option>
                     </select>

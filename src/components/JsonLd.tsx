@@ -7,7 +7,7 @@ export function OrganizationJsonLd() {
     url: "https://ann-hewan-foundation.vercel.app",
     logo: "https://ann-hewan-foundation.vercel.app/images/logo.webp",
     description:
-      "A 501(c)(3) nonprofit organization supporting education, nutrition, and community development in Goodwill, St. James, Jamaica.",
+      "A 501(c)(3) nonprofit organization supporting education, nutrition, and community development in Goodwill and surrounding communities in St. James, Jamaica.",
     foundingDate: "2010",
     founder: {
       "@type": "Person",

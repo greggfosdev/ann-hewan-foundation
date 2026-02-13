@@ -84,7 +84,7 @@ export default function GetInvolvedPage() {
             <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-gold to-coral" />
             <p className="mt-6 text-lg leading-8 text-gray-600">
               There are many ways to support the Ann Hewan Foundation and make a
-              difference in the lives of families in Goodwill.
+              difference in the lives of families in Goodwill and surrounding communities.
             </p>
           </div>
         </div>

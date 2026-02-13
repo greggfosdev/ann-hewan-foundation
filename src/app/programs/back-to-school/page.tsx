@@ -166,7 +166,7 @@ export default function BackToSchoolPage() {
             <div>
               <h2 className="text-2xl font-bold text-gray-900">The Challenge</h2>
               <p className="mt-4 text-lg text-gray-600">
-                For many families in Goodwill, the cost of school supplies and
+                For many families in Goodwill and surrounding communities, the cost of school supplies and
                 uniforms is a significant burden. Some children miss school or
                 attend without proper materials, affecting their education and
                 self-esteem.

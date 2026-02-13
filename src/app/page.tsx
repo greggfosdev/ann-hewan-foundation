@@ -25,7 +25,7 @@ export default function Home() {
               Watch Our Story
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              See how your support transforms lives in the Goodwill community.
+              See how your support transforms lives in Goodwill and surrounding communities.
             </p>
           </div>
 
@@ -109,7 +109,7 @@ export default function Home() {
               <p className="mt-6 text-lg leading-8 text-gray-600">
                 The Ann Hewan Foundation was established to continue the
                 compassionate work that defined Ann&apos;s life. Born from deep
-                roots in the Goodwill community of St. James, Jamaica, we are
+                roots in the Goodwill community and surrounding areas of St. James, Jamaica, we are
                 committed to uplifting families through education, nutrition,
                 and sustainable development.
               </p>
@@ -241,7 +241,7 @@ export default function Home() {
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Whether you donate, volunteer, or spread the word, every action
-              helps us make a difference in the lives of families in Goodwill.
+              helps us make a difference in the lives of families in Goodwill and surrounding communities.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link

@@ -13,11 +13,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "The Ann Hewan Foundation | Uplifting the Goodwill Community",
+    default: "The Ann Hewan Foundation | Uplifting Goodwill & Surrounding Communities",
     template: "%s | The Ann Hewan Foundation",
   },
   description:
-    "A 501(c)(3) foundation supporting education, nutrition, and community development in Goodwill, St. James, Jamaica.",
+    "A 501(c)(3) foundation supporting education, nutrition, and community development in Goodwill and surrounding communities in St. James, Jamaica.",
   keywords: [
     "Jamaica charity",
     "Caribbean nonprofit",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "The Ann Hewan Foundation",
-    description: "A 501(c)(3) nonprofit supporting education, nutrition, and community development in Goodwill, St. James, Jamaica.",
+    description: "A 501(c)(3) nonprofit supporting education, nutrition, and community development in Goodwill and surrounding communities in St. James, Jamaica.",
     locale: "en_US",
     type: "website",
     siteName: "The Ann Hewan Foundation",

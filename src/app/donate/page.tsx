@@ -65,7 +65,7 @@ export default function DonatePage() {
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Every dollar helps us feed children, support education, and strengthen
-            the Goodwill community. Your gift is tax-deductible.
+            Goodwill and surrounding communities. Your gift is tax-deductible.
           </p>
         </div>
 
@@ -341,7 +341,7 @@ export default function DonatePage() {
                 <p className="text-sm text-gray-600">
                   All administrative costs are covered by our founders and board members,
                   ensuring every dollar you donate goes directly to helping children
-                  and families in Goodwill.
+                  and families in Goodwill and surrounding communities.
                 </p>
               </div>
             </div>

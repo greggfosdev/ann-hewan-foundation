@@ -11,7 +11,7 @@ const newsItems = [
     id: 1,
     title: "Back 2 School 2026 Campaign Launches",
     excerpt:
-      "We're excited to announce the launch of our annual Back 2 School campaign, aiming to provide school supplies and uniforms to over 100 students in the Goodwill community.",
+      "We're excited to announce the launch of our annual Back 2 School campaign, aiming to provide school supplies and uniforms to over 100 students in Goodwill and surrounding communities.",
     date: "January 15, 2026",
     category: "Campaign",
     image: null,
@@ -20,7 +20,7 @@ const newsItems = [
     id: 2,
     title: "Breakfast Project Reaches 150 Children Daily",
     excerpt:
-      "A milestone achievement for our flagship program - we're now serving nutritious breakfasts to over 150 children every school day in Goodwill.",
+      "A milestone achievement for our flagship program - we're now serving nutritious breakfasts to over 150 children every school day in Goodwill and surrounding communities.",
     date: "December 10, 2025",
     category: "Impact",
     image: null,
@@ -89,7 +89,7 @@ export default function NewsPage() {
             <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-gold to-coral" />
             <p className="mt-6 text-lg leading-8 text-gray-600">
               The latest updates, impact stories, and news from the Ann Hewan
-              Foundation and the Goodwill community.
+              Foundation and the Goodwill and surrounding communities.
             </p>
           </div>
         </div>

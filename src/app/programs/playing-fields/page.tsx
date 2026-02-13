@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Playing Fields Project",
   description:
-    "Building safe recreational spaces that bring youth together and strengthen the Goodwill community.",
+    "Building safe recreational spaces that bring youth together and strengthen Goodwill and surrounding communities.",
 };
 
 const stats = [

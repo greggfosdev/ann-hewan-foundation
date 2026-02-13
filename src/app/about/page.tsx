@@ -62,7 +62,7 @@ export default function AboutPage() {
                 <p className="mt-4 text-lg text-gray-600">
                   To empower individuals and strengthen communities through
                   education, support services, and sustainable development
-                  initiatives in Goodwill, St. James, Jamaica.
+                  initiatives in Goodwill and surrounding communities in St. James, Jamaica.
                 </p>
               </div>
 

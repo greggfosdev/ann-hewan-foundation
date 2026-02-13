@@ -36,7 +36,7 @@ const programs: Program[] = [
   {
     name: "The Breakfast Project",
     description:
-      "Providing nutritious morning meals to children in the Goodwill community, ensuring they start each day ready to learn.",
+      "Providing nutritious morning meals to children in Goodwill and surrounding communities, ensuring they start each day ready to learn.",
     href: "/programs/breakfast-project",
     color: "gold",
     icon: (
@@ -114,7 +114,7 @@ export function ProgramCards() {
           </h2>
           <p className="mt-4 text-lg text-gray-600">
             Making a lasting difference through targeted initiatives that
-            address the real needs of the Goodwill community.
+            address the real needs of Goodwill and surrounding communities.
           </p>
         </div>
         <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
