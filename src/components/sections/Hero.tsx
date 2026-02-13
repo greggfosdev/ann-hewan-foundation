@@ -12,8 +12,8 @@ interface HeroProps {
 }
 
 const stats = [
-  { value: "500+", label: "Children Fed Daily" },
-  { value: "1,000+", label: "Students Supported" },
+  { value: "150+", label: "Children Fed Daily" },
+  { value: "300+", label: "Students Supported" },
   { value: "15", label: "Years of Service" },
   { value: "100%", label: "To Programs" },
 ];

@@ -116,7 +116,7 @@ export function Testimonials() {
         {/* Trust indicators */}
         <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-center">
           <div>
-            <p className="text-3xl font-bold text-gold">500+</p>
+            <p className="text-3xl font-bold text-gold">200+</p>
             <p className="text-sm text-gray-600">Supporters</p>
           </div>
           <div className="h-12 w-px bg-gray-200" />

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "300+", label: "Families Assisted" },
+  { value: "100+", label: "Families Assisted" },
   { value: "24hr", label: "Response Time" },
   { value: "100%", label: "To Relief Efforts" },
   { value: "Ongoing", label: "Recovery Support" },

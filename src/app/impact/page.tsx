@@ -9,12 +9,12 @@ export const metadata: Metadata = {
 };
 
 const impactStats = [
-  { label: "Children Fed Daily", value: "500+", description: "Through our Breakfast Project", color: "gold" },
-  { label: "Students Supported", value: "1,000+", description: "With school supplies and uniforms", color: "ocean" },
+  { label: "Children Fed Daily", value: "150+", description: "Through our Breakfast Project", color: "gold" },
+  { label: "Students Supported", value: "300+", description: "With school supplies and uniforms", color: "ocean" },
   { label: "Years of Service", value: "15", description: "Serving the Goodwill community", color: "coral" },
-  { label: "Meals Served Annually", value: "90,000+", description: "Nutritious breakfasts", color: "gold" },
-  { label: "Families Reached", value: "300+", description: "Direct community support", color: "ocean" },
-  { label: "Volunteers Engaged", value: "50+", description: "Dedicated community members", color: "coral" },
+  { label: "Meals Served Annually", value: "25,000+", description: "Nutritious breakfasts", color: "gold" },
+  { label: "Families Reached", value: "100+", description: "Direct community support", color: "ocean" },
+  { label: "Volunteers Engaged", value: "25+", description: "Dedicated community members", color: "coral" },
 ];
 
 const colorMap = {

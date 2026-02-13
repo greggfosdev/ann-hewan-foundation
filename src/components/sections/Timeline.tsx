@@ -19,9 +19,9 @@ const milestones = [
   },
   {
     year: "2018",
-    title: "500+ Children Fed Daily",
+    title: "150+ Children Fed Daily",
     description:
-      "Reached the milestone of feeding over 500 children breakfast every school day across multiple schools.",
+      "Reached the milestone of feeding over 150 children breakfast every school day across multiple schools.",
   },
   {
     year: "2020",
@@ -39,7 +39,7 @@ const milestones = [
     year: "2026",
     title: "15 Years of Service",
     description:
-      "Celebrating 15 years of uplifting the Goodwill community with over 1,000 students supported annually.",
+      "Celebrating 15 years of uplifting the Goodwill community with over 300 students supported annually.",
   },
 ];
 

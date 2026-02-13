@@ -4,12 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "The Breakfast Project",
   description:
-    "Providing nutritious morning meals to over 500 children daily in the Goodwill community.",
+    "Providing nutritious morning meals to over 150 children daily in the Goodwill community.",
 };
 
 const stats = [
-  { value: "500+", label: "Children Fed Daily" },
-  { value: "90,000+", label: "Meals Served Annually" },
+  { value: "150+", label: "Children Fed Daily" },
+  { value: "25,000+", label: "Meals Served Annually" },
   { value: "5", label: "Schools Served" },
   { value: "100%", label: "To Programs" },
 ];
@@ -85,7 +85,7 @@ export default function BreakfastProjectPage() {
             </h1>
             <p className="mt-6 text-xl leading-8 text-gray-600">
               No child should have to learn on an empty stomach. Our flagship
-              program ensures that over 500 children in Goodwill start each
+              program ensures that over 150 children in Goodwill start each
               school day with a nutritious breakfast.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">

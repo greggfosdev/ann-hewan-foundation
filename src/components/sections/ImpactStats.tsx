@@ -11,13 +11,13 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    value: 500,
+    value: 150,
     suffix: "+",
     label: "Children Fed Daily",
     emotionalLabel: "Children who won't go hungry today",
   },
   {
-    value: 1000,
+    value: 300,
     suffix: "+",
     label: "Students Supported",
     emotionalLabel: "Dreams we're helping achieve",
@@ -132,7 +132,7 @@ export function ImpactStats() {
               Back 2 School 2026
             </p>
             <p className="mt-2 text-ocean-light">
-              Help us reach 200 students with school supplies
+              Help us reach 100 students with school supplies
             </p>
 
             <div className="mt-6">

@@ -10,9 +10,9 @@ const programs = [
   {
     name: "The Breakfast Project",
     description:
-      "Our flagship program ensures that no child in Goodwill goes to school hungry. We provide nutritious morning meals to over 500 children daily.",
+      "Our flagship program ensures that no child in Goodwill goes to school hungry. We provide nutritious morning meals to over 150 children daily.",
     href: "/programs/breakfast-project",
-    stats: { value: "500+", label: "Children Fed Daily" },
+    stats: { value: "150+", label: "Children Fed Daily" },
     color: "gold",
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
@@ -23,9 +23,9 @@ const programs = [
   {
     name: "Back 2 School Initiative",
     description:
-      "Every child deserves to start the school year with pride. We provide school supplies, uniforms, and educational resources to over 1,000 students annually.",
+      "Every child deserves to start the school year with pride. We provide school supplies, uniforms, and educational resources to over 300 students annually.",
     href: "/programs/back-to-school",
-    stats: { value: "1,000+", label: "Students Supported" },
+    stats: { value: "300+", label: "Students Supported" },
     color: "ocean",
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
@@ -51,7 +51,7 @@ const programs = [
     description:
       "When disaster strikes, we're there. Our hurricane relief program provides emergency support to families affected by storms.",
     href: "/programs/hurricane-relief",
-    stats: { value: "300+", label: "Families Assisted" },
+    stats: { value: "100+", label: "Families Assisted" },
     color: "trust-green",
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">

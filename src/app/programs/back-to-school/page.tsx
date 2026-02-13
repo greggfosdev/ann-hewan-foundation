@@ -4,11 +4,11 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Back 2 School Initiative",
   description:
-    "Providing school supplies, uniforms, and educational resources to over 1,000 students annually.",
+    "Providing school supplies, uniforms, and educational resources to over 300 students annually.",
 };
 
 const stats = [
-  { value: "1,000+", label: "Students Supported" },
+  { value: "300+", label: "Students Supported" },
   { value: "5", label: "Schools Served" },
   { value: "15", label: "Years Running" },
   { value: "100%", label: "To Programs" },
@@ -86,7 +86,7 @@ export default function BackToSchoolPage() {
             <p className="mt-6 text-xl leading-8 text-gray-600">
               Every child deserves to start the school year with pride. We
               provide school supplies, uniforms, and educational resources to
-              over 1,000 students annually.
+              over 300 students annually.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link

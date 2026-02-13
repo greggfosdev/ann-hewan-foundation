@@ -349,7 +349,7 @@ export default function DonatePage() {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-900/5">
-                <p className="text-3xl font-bold text-gold">500+</p>
+                <p className="text-3xl font-bold text-gold">150+</p>
                 <p className="mt-1 text-sm text-gray-600">Children fed daily</p>
               </div>
               <div className="rounded-xl bg-white p-6 text-center shadow-sm ring-1 ring-gray-900/5">

@@ -223,7 +223,7 @@ export default function Home() {
           {/* Join supporters CTA */}
           <div className="mt-16 text-center">
             <p className="text-sm text-gray-500">
-              Join <span className="font-semibold text-gray-900">500+</span> supporters making a difference
+              Join <span className="font-semibold text-gray-900">200+</span> supporters making a difference
             </p>
           </div>
         </div>
