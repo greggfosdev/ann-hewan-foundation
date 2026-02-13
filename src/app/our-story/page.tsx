@@ -43,22 +43,63 @@ export default function OurStoryPage() {
               </h2>
               <div className="mt-6 space-y-6 text-lg leading-8 text-gray-600">
                 <p>
-                  Ann Hewan was more than a name—she was a beacon of hope in the
-                  Goodwill community of St. James, Jamaica. Her life was defined
-                  by an extraordinary compassion for children and families in
-                  need.
+                  Ann Hewan was a sister, an aunt, an impromptu grandmother, a
+                  neighbor, a friend, and a pillar of the Goodwill Community.
                 </p>
                 <p>
-                  Born and raised in Jamaica, Ann understood the challenges
-                  facing her community. She believed that every child deserved a
-                  chance to succeed, regardless of their circumstances. This
-                  belief drove her to action, and her kitchen became a gathering
-                  place where no child went hungry.
+                  Aunt Ann was born and raised in Goodwill, St. James, Jamaica,
+                  W.I. She was an active member of the Goodwill United Church.
+                  Furthermore, she was known as the woman of many hats and the
+                  kindest neighbor in the community. If you were hungry she would
+                  feed you, if you were tired she would give you a place to stay.
+                  Aunt Ann wanted to make sure everyone was taken care of. Her
+                  selflessness radiates through the streets of Goodwill even years
+                  after her passing. People talk about her compassion and love
+                  every day.
                 </p>
                 <p>
-                  Though Ann has passed, her spirit lives on through this
-                  foundation. We carry forward her mission with the same love
-                  and dedication that defined her life.
+                  Aunt Ann had no children of her own, but devoted herself to her
+                  community, taking care of the many children within her area.
+                  Family members like her niece would allow Aunt Ann to take care
+                  of their children while they were in the process of migrating to
+                  the United States of America.
+                </p>
+                <p>
+                  You would never know that Aunt Ann did not have any children of
+                  her own—she was always accompanied by someone&apos;s child in the
+                  community. When her niece left her son, Eddie Peters
+                  &ldquo;Pete,&rdquo; he would accompany her everywhere she went,
+                  and his friends followed. Her title quickly expanded from just
+                  Ann Hewan, to Aunt Ann, to &ldquo;Pete&apos;s&rdquo;
+                  Grandmother.
+                </p>
+                <p>
+                  Her aura of positivity was something people gravitated towards.
+                  When you were with her, you might have came with nothing, or
+                  might not have needed anything, but you always left with
+                  something. Whether that was a full belly from a great meal,
+                  fruits and vegetables from her garden, dessert she had baked, or
+                  even just a new story to share with your loved ones—you always
+                  left with something.
+                </p>
+                <p>
+                  Aunt Ann was one of the most soft spoken, kindest souls you
+                  could come across. Her belief was that love, compassion,
+                  education, and a good meal could change someone&apos;s life for
+                  the better. Her beliefs trickle down in the mission of this
+                  organization.
+                </p>
+                <p>
+                  The Ann Hewan Foundation strives to uphold her pillars of
+                  community and share her love and compassion through charity. Her
+                  energy is the very glue to this foundation.
+                </p>
+                <p>
+                  In her honor we will be compassionate, loving, selfless,
+                  passionate, gracious, charitable, and educated. Moreover, we
+                  will uplift the Goodwill Community and the neighboring areas to
+                  uphold these same pillars—so that they too can experience Ann
+                  Hewan&apos;s grace through kind work.
                 </p>
               </div>
             </div>
@@ -77,6 +118,117 @@ export default function OurStoryPage() {
               {/* Decorative element */}
               <div className="absolute -bottom-6 -right-6 -z-10 h-48 w-48 rounded-full bg-gold/10" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Mission */}
+      <section className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold">
+              Our Purpose
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Our Mission
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Our mission is to uplift the people of our community, by providing
+              schools, churches, and those in need with adequate resources to
+              help promote prosperity. By doing so we are committed to inspire
+              and empower the youth to uphold Ann Hewan&apos;s 7 Pillars of
+              Community.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 7 Pillars of Community */}
+      <section className="bg-cream py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold">
+              What Guides Us
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Her 7 Pillars of Community
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              The values Ann Hewan lived by, and the foundation we build upon.
+            </p>
+          </div>
+          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:grid-cols-2 lg:max-w-none lg:grid-cols-4">
+            {[
+              {
+                name: "Compassionate",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                  </svg>
+                ),
+              },
+              {
+                name: "Selfless",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                ),
+              },
+              {
+                name: "Educated",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 00-.491 6.347A48.62 48.62 0 0112 20.904a48.62 48.62 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.636 50.636 0 00-2.658-.813A59.906 59.906 0 0112 3.493a59.903 59.903 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                  </svg>
+                ),
+              },
+              {
+                name: "Passionate",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.047 8.287 8.287 0 009 9.601a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.468 5.99 5.99 0 00-1.925 3.547 5.975 5.975 0 01-2.133-1.001A3.75 3.75 0 0012 18z" />
+                  </svg>
+                ),
+              },
+              {
+                name: "Loving",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+                  </svg>
+                ),
+              },
+              {
+                name: "Gracious",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                  </svg>
+                ),
+              },
+              {
+                name: "Charitable",
+                icon: (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                  </svg>
+                ),
+              },
+            ].map((value) => (
+              <div
+                key={value.name}
+                className="rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-gray-900/5"
+              >
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
+                  {value.icon}
+                </div>
+                <h3 className="mt-6 text-lg font-semibold text-gray-900">
+                  {value.name}
+                </h3>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -155,7 +307,7 @@ export default function OurStoryPage() {
             </h3>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               {[
-                { name: "Jaida Williams", role: "Chief Operations Officer & Director of Philanthropy" },
+                { name: "Jaida Williams", role: "Director of Philanthropy" },
                 { name: "Jhamyr Peters", role: "Executive Director" },
                 { name: "Lark Wallace", role: "Accountant" },
                 { name: "Stacy Ann Earl Peters", role: "Treasury" },
@@ -185,82 +337,10 @@ export default function OurStoryPage() {
           <div className="mt-12 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:text-gold transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gold/30 hover:bg-gold-dark hover:shadow-gold/40 transition-all"
             >
               Contact Us <span aria-hidden="true">→</span>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Values */}
-      <section className="bg-cream py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-gold">
-              What Guides Us
-            </p>
-            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Our Values
-            </h2>
-          </div>
-          <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:max-w-none lg:grid-cols-4">
-            {[
-              {
-                name: "Community First",
-                description:
-                  "Every decision centers on what's best for the families we serve.",
-                icon: (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-                  </svg>
-                ),
-              },
-              {
-                name: "Transparency",
-                description:
-                  "We maintain complete openness about our finances and operations.",
-                icon: (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                ),
-              },
-              {
-                name: "Sustainability",
-                description:
-                  "Building lasting solutions, not temporary fixes.",
-                icon: (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 3.03v.568c0 .334.148.65.405.864l1.068.89c.442.369.535 1.01.216 1.49l-.51.766a2.25 2.25 0 01-1.161.886l-.143.048a1.107 1.107 0 00-.57 1.664c.369.555.169 1.307-.427 1.605L9 13.125l.423 1.059a.956.956 0 01-1.652.928l-.679-.906a1.125 1.125 0 00-1.906.172L4.5 15.75l-.612.153M12.75 3.031a9 9 0 00-8.862 12.872M12.75 3.031a9 9 0 016.69 14.036m0 0l-.177-.529A2.25 2.25 0 0017.128 15H16.5l-.324-.324a1.453 1.453 0 00-2.328.377l-.036.073a1.586 1.586 0 01-.982.816l-.99.282c-.55.157-.894.702-.8 1.267l.073.438c.08.474.49.821.97.821.846 0 1.598.542 1.865 1.345l.215.643m5.276-3.67a9.012 9.012 0 01-5.276 3.67m0 0a9 9 0 01-10.275-4.835M15.75 9c0 .896-.393 1.7-1.016 2.25" />
-                  </svg>
-                ),
-              },
-              {
-                name: "Dignity",
-                description:
-                  "Serving others with respect and preserving their self-worth.",
-                icon: (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                  </svg>
-                ),
-              },
-            ].map((value) => (
-              <div
-                key={value.name}
-                className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold/10 text-gold">
-                  {value.icon}
-                </div>
-                <h3 className="mt-6 text-lg font-semibold text-gray-900">
-                  {value.name}
-                </h3>
-                <p className="mt-4 text-gray-600">{value.description}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
