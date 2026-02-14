@@ -41,7 +41,7 @@ export function Header() {
               height={48}
               className="h-12 w-auto"
             />
-            <span className="hidden sm:inline text-lg font-bold text-gray-900">
+            <span className="text-base sm:text-lg font-bold text-gray-900">
               Ann Hewan Foundation
             </span>
           </Link>
