@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Hurricane Relief",
   description:
-    "Emergency support for families affected by hurricanes, including food, shelter supplies, and rebuilding assistance.",
+    "Emergency support for families affected by Hurricane Melissa, including food, shelter supplies, and rebuilding assistance.",
 };
 
 const stats = [
@@ -81,11 +81,11 @@ export default function HurricaneReliefPage() {
               </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-              Hurricane Relief
+              Hurricane Melissa Relief
             </h1>
             <p className="mt-6 text-xl leading-8 text-gray-600">
-              When disaster strikes, we&apos;re there. Our hurricane relief
-              program provides emergency support to families affected by storms,
+              When Hurricane Melissa struck, we were there. Our relief program
+              provided emergency support to families affected by the storm,
               helping them survive and rebuild.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
@@ -187,6 +187,48 @@ export default function HurricaneReliefPage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Relief Distribution Photos */}
+      <section className="bg-cream py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Hurricane Melissa Relief Distribution
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Our team on the ground distributing emergency supplies to affected families.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 lg:grid-cols-4">
+            {[
+              { src: "/images/hurricane-relief/relief-1.jpg", alt: "Volunteer handing relief supplies to a young child in the community" },
+              { src: "/images/hurricane-relief/relief-2.jpg", alt: "Community members gathering at distribution point for hurricane relief supplies" },
+              { src: "/images/hurricane-relief/relief-3.jpg", alt: "Foundation team coordinating with community members during relief distribution" },
+              { src: "/images/hurricane-relief/relief-4.jpg", alt: "Foundation members with emergency services at relief distribution center" },
+              { src: "/images/hurricane-relief/relief-5.jpg", alt: "Volunteers organizing and distributing hurricane relief supplies" },
+              { src: "/images/hurricane-relief/relief-6.jpg", alt: "Community members receiving emergency supplies after Hurricane Melissa" },
+              { src: "/images/hurricane-relief/relief-7.jpg", alt: "Relief distribution efforts in the community following Hurricane Melissa" },
+              { src: "/images/hurricane-relief/relief-8.jpg", alt: "Community members gathered for hurricane relief supply distribution" },
+            ].map((photo, i) => (
+              <div
+                key={i}
+                className="aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-gray-900/5"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          <p className="mx-auto mt-6 max-w-2xl text-center text-sm text-gray-500">
+            The Ann Hewan Foundation distributing emergency supplies to families affected by Hurricane Melissa.
+          </p>
         </div>
       </section>
 

@@ -313,7 +313,7 @@ export default function OurStoryPage() {
                 { name: "Jaida Williams", role: "Director of Philanthropy" },
                 { name: "Jhamyr Peters", role: "Executive Director" },
                 { name: "Lark Wallace", role: "Accountant" },
-                { name: "Stacy Ann Earl Peters", role: "Treasury" },
+                { name: "Stacie Ann Earle Peters", role: "Treasury" },
                 { name: "Gisela Alvarez", role: "Board Member" },
                 { name: "Egda Avila", role: "Board Member" },
                 { name: "Wendy Williams-Brown", role: "Board Member" },

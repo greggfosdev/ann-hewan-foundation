@@ -23,7 +23,7 @@ const programs = [
   {
     name: "Back 2 School Initiative",
     description:
-      "Every child deserves to start the school year with pride. We provide school supplies, uniforms, and educational resources to over 300 students annually.",
+      "Every child deserves to start the school year with pride. We assist students with school supplies, uniforms, and educational resources, supporting over 300 students annually.",
     href: "/programs/back-to-school",
     stats: { value: "300+", label: "Students Supported" },
     color: "ocean",
@@ -47,9 +47,9 @@ const programs = [
     ),
   },
   {
-    name: "Hurricane Relief",
+    name: "Hurricane Melissa Relief",
     description:
-      "When disaster strikes, we're there. Our hurricane relief program provides emergency support to families affected by storms.",
+      "When Hurricane Melissa struck, we were there. Our relief program provided emergency support to families affected by the storm.",
     href: "/programs/hurricane-relief",
     stats: { value: "100+", label: "Families Assisted" },
     color: "trust-green",

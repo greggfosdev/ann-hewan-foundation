@@ -24,10 +24,10 @@ const milestones = [
       "Reached the milestone of feeding over 150 children breakfast every school day across multiple schools.",
   },
   {
-    year: "2020",
-    title: "Hurricane Relief Response",
+    year: "2025",
+    title: "Hurricane Melissa Relief",
     description:
-      "Expanded operations to include emergency relief, helping families recover from hurricane damage.",
+      "Expanded operations to include emergency relief, helping families recover from Hurricane Melissa.",
   },
   {
     year: "2024",

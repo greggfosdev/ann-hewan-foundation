@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Back 2 School Initiative",
   description:
-    "Providing school supplies, uniforms, and educational resources to over 300 students annually.",
+    "Assisting students with school supplies, uniforms, and educational resources, supporting over 300 students annually.",
 };
 
 const stats = [
@@ -23,7 +23,7 @@ const features = [
   {
     title: "Backpacks & Supplies",
     description:
-      "We provide quality backpacks filled with essential school supplies including notebooks, pens, pencils, and more.",
+      "We assist students with quality backpacks filled with essential school supplies including notebooks, pens, pencils, and more.",
   },
   {
     title: "Textbooks & Learning Materials",
@@ -85,8 +85,8 @@ export default function BackToSchoolPage() {
             </h1>
             <p className="mt-6 text-xl leading-8 text-gray-600">
               Every child deserves to start the school year with pride. We
-              provide school supplies, uniforms, and educational resources to
-              over 300 students annually.
+              assist students with school supplies, uniforms, and educational resources,
+              supporting over 300 students annually.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
@@ -186,7 +186,7 @@ export default function BackToSchoolPage() {
                 for the school year: uniforms, backpacks, supplies, and shoes.
               </p>
               <p className="mt-4 text-lg text-gray-600">
-                By providing these essentials, we remove barriers to education
+                By assisting with these essentials, we remove barriers to education
                 and ensure every child can start the school year with confidence
                 and pride. The joy on their faces during distribution day is
                 unforgettable.
@@ -201,10 +201,10 @@ export default function BackToSchoolPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              What We Provide
+              How We Help
             </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Everything a student needs to succeed in school.
+              Supporting students with what they need to succeed in school.
             </p>
           </div>
 
@@ -235,23 +235,23 @@ export default function BackToSchoolPage() {
               Back 2 School 2026
             </h2>
             <p className="mt-4 text-lg text-ocean-light">
-              Help us provide school supplies and uniforms for 200+ students
+              Help us assist 200+ students with school supplies and uniforms
               this academic year.
             </p>
 
             {/* Progress bar */}
             <div className="mt-8 mx-auto max-w-md">
               <div className="flex justify-between text-sm">
-                <span className="font-medium text-white">$3,500 raised</span>
+                <span className="font-medium text-white">$875 raised</span>
                 <span className="text-ocean-light">$10,000 goal</span>
               </div>
               <div className="mt-2 h-3 w-full overflow-hidden rounded-full bg-white/20">
                 <div
                   className="h-full rounded-full bg-gold transition-all duration-1000"
-                  style={{ width: "35%" }}
+                  style={{ width: "9%" }}
                 />
               </div>
-              <p className="mt-2 text-sm text-ocean-light">35% complete</p>
+              <p className="mt-2 text-sm text-ocean-light">9% complete</p>
             </div>
 
             <div className="mt-8">
@@ -297,10 +297,10 @@ export default function BackToSchoolPage() {
               Equip a Student for Success
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              <strong className="text-ocean">$50</strong> provides a complete
+              <strong className="text-ocean">$50</strong> assists a student with a
               uniform and basic supplies.{" "}
-              <strong className="text-ocean">$100</strong> provides everything a
-              student needs for the year.
+              <strong className="text-ocean">$100</strong> assists a student with
+              everything needed for the year.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
