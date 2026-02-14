@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Back 2 School Initiative",
   description:
-    "Assisting students with school supplies, uniforms, and educational resources, supporting over 300 students annually.",
+    "Providing school supplies and assisting students with uniforms and educational resources, supporting over 300 students annually.",
 };
 
 const stats = [
@@ -23,7 +23,7 @@ const features = [
   {
     title: "Backpacks & Supplies",
     description:
-      "We assist students with quality backpacks filled with essential school supplies including notebooks, pens, pencils, and more.",
+      "We provide quality backpacks filled with essential school supplies including notebooks, pens, pencils, and more.",
   },
   {
     title: "Textbooks & Learning Materials",
@@ -33,7 +33,12 @@ const features = [
   {
     title: "Shoes & Essential Items",
     description:
-      "We ensure children have proper footwear and other essentials needed for school attendance.",
+      "We assist students with proper footwear and other essentials needed for school attendance.",
+  },
+  {
+    title: "Laptop Awards",
+    description:
+      "Each year, we award 2 laptops to the top performing students — one male and one female — advancing to high school, empowering them to continue excelling in their education.",
   },
 ];
 
@@ -85,8 +90,8 @@ export default function BackToSchoolPage() {
             </h1>
             <p className="mt-6 text-xl leading-8 text-gray-600">
               Every child deserves to start the school year with pride. We
-              assist students with school supplies, uniforms, and educational resources,
-              supporting over 300 students annually.
+              provide school supplies and assist students with uniforms and
+              educational resources, supporting over 300 students annually.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
@@ -186,7 +191,7 @@ export default function BackToSchoolPage() {
                 for the school year: uniforms, backpacks, supplies, and shoes.
               </p>
               <p className="mt-4 text-lg text-gray-600">
-                By assisting with these essentials, we remove barriers to education
+                By providing supplies and assisting with these essentials, we remove barriers to education
                 and ensure every child can start the school year with confidence
                 and pride. The joy on their faces during distribution day is
                 unforgettable.
@@ -235,8 +240,8 @@ export default function BackToSchoolPage() {
               Back 2 School 2026
             </h2>
             <p className="mt-4 text-lg text-ocean-light">
-              Help us assist 200+ students with school supplies and uniforms
-              this academic year.
+              Help us provide school supplies and assist 200+ students with
+              uniforms this academic year.
             </p>
 
             {/* Progress bar */}
@@ -297,10 +302,10 @@ export default function BackToSchoolPage() {
               Equip a Student for Success
             </h2>
             <p className="mt-6 text-lg text-gray-600">
-              <strong className="text-ocean">$50</strong> assists a student with a
-              uniform and basic supplies.{" "}
-              <strong className="text-ocean">$100</strong> assists a student with
-              everything needed for the year.
+              <strong className="text-ocean">$50</strong> provides a student with
+              supplies and assists with a uniform.{" "}
+              <strong className="text-ocean">$100</strong> covers everything a
+              student needs for the year.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link

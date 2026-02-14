@@ -23,7 +23,7 @@ const programs = [
   {
     name: "Back 2 School Initiative",
     description:
-      "Every child deserves to start the school year with pride. We assist students with school supplies, uniforms, and educational resources, supporting over 300 students annually.",
+      "Every child deserves to start the school year with pride. We provide school supplies and assist students with uniforms and educational resources, supporting over 300 students annually.",
     href: "/programs/back-to-school",
     stats: { value: "300+", label: "Students Supported" },
     color: "ocean",
