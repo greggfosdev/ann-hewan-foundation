@@ -7,9 +7,9 @@ const recentDonors = [
 ];
 
 const impactStats = [
-  { label: "Total Raised This Year", value: "$47,500" },
-  { label: "Donors This Month", value: "127" },
-  { label: "Recurring Donors", value: "43" },
+  { label: "Total Raised This Year", value: "$3,500" },
+  { label: "Donors This Month", value: "7" },
+  { label: "Recurring Donors", value: "12" },
 ];
 
 export function DonorWall() {
@@ -77,7 +77,7 @@ export function DonorWall() {
             <div className="rounded-2xl bg-gradient-to-br from-gold to-gold-dark p-6 text-white">
               <p className="font-semibold">Become a Monthly Donor</p>
               <p className="mt-2 text-sm text-gold-light">
-                Join 43 recurring donors and make 12x the impact with a monthly
+                Join 12 recurring donors and make 12x the impact with a monthly
                 gift.
               </p>
               <a
