@@ -132,22 +132,22 @@ export function ImpactStats() {
               Back 2 School 2026
             </p>
             <p className="mt-2 text-ocean-light">
-              Help us reach 100 students with school supplies
+              Help us assist 200+ students with school supplies and uniforms
             </p>
 
             <div className="mt-6">
               <div className="flex justify-between text-sm">
-                <span className="font-medium">$3,500 raised</span>
+                <span className="font-medium">$875 raised</span>
                 <span className="text-ocean-light">$10,000 goal</span>
               </div>
               <div className="mt-2 h-3 w-full overflow-hidden rounded-full bg-white/20">
                 <div
                   className="h-full rounded-full bg-gold transition-all duration-1000"
-                  style={{ width: "35%" }}
+                  style={{ width: "9%" }}
                 />
               </div>
               <p className="mt-2 text-sm text-ocean-light">
-                35% complete
+                9% complete
               </p>
             </div>
           </div>
