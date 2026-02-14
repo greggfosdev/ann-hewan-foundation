@@ -261,7 +261,7 @@ export default function ImpactPage() {
         </div>
       </section>
 
-      {/* Our Partners */}
+      {/* Partners & Sponsors */}
       <section className="bg-sand py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -269,55 +269,87 @@ export default function ImpactPage() {
               Working Together
             </p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Our Partners
+              Partners & Sponsors
             </h2>
             <p className="mt-4 text-lg text-gray-600">
               Organizations working alongside us to uplift our communities.
             </p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-4xl grid-cols-2 gap-8 lg:grid-cols-4">
-            {[
-              {
-                name: "Goodwill School Alumni Foundation",
-                logo: "/images/partners/gsaf.jpg",
-                href: "https://gsafoundation.com/",
-              },
-              {
-                name: "Jamaica Tours Limited",
-                logo: "/images/partners/jtl.webp",
-                href: "https://jamaicatoursltd.com/",
-              },
-              {
-                name: "Giving 4 Hope",
-                logo: "/images/partners/giving4hope.webp",
-                href: "https://www.giving4hope.org/",
-              },
-              {
-                name: "Ray Peeples Ministries",
-                logo: "/images/partners/rpm.webp",
-                href: "https://www.raypeeples.com/",
-              },
-            ].map((partner) => (
-              <a
-                key={partner.name}
-                href={partner.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center group"
-              >
-                <div className="flex h-32 w-full items-center justify-center rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5 transition-shadow group-hover:shadow-md group-hover:ring-gold/30">
-                  <img
-                    src={partner.logo}
-                    alt={partner.name}
-                    className="max-h-24 max-w-full object-contain"
-                  />
-                </div>
-                <p className="mt-3 text-center text-sm font-medium text-gray-700 group-hover:text-gold-dark transition-colors">
-                  {partner.name}
-                </p>
-              </a>
-            ))}
+          {/* Partners */}
+          <div className="mx-auto mt-16 max-w-4xl">
+            <h3 className="text-center text-lg font-semibold text-gray-900">Our Partners</h3>
+            <div className="mt-6 grid grid-cols-2 gap-8 justify-items-center max-w-2xl mx-auto">
+              {[
+                {
+                  name: "Goodwill School Alumni Foundation",
+                  logo: "/images/partners/gsaf.jpg",
+                  href: "https://gsafoundation.com/",
+                },
+                {
+                  name: "Giving 4 Hope",
+                  logo: "/images/partners/giving4hope.webp",
+                  href: "https://www.giving4hope.org/",
+                },
+              ].map((partner) => (
+                <a
+                  key={partner.name}
+                  href={partner.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center group w-full"
+                >
+                  <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5 transition-shadow group-hover:shadow-md group-hover:ring-gold/30">
+                    <img
+                      src={partner.logo}
+                      alt={partner.name}
+                      className="max-h-40 max-w-[12rem] object-contain"
+                    />
+                  </div>
+                  <p className="mt-3 text-center text-sm font-medium text-gray-700 group-hover:text-gold-dark transition-colors">
+                    {partner.name}
+                  </p>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Sponsors */}
+          <div className="mx-auto mt-16 max-w-4xl">
+            <h3 className="text-center text-lg font-semibold text-gray-900">Our Sponsors</h3>
+            <div className="mt-6 grid grid-cols-2 gap-8 justify-items-center max-w-2xl mx-auto">
+              {[
+                {
+                  name: "Jamaica Tours Limited",
+                  logo: "/images/partners/jtl.webp",
+                  href: "https://jamaicatoursltd.com/",
+                },
+                {
+                  name: "Ray Peeples Ministries",
+                  logo: "/images/partners/rpm.webp",
+                  href: "https://www.raypeeples.com/",
+                },
+              ].map((sponsor) => (
+                <a
+                  key={sponsor.name}
+                  href={sponsor.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center group w-full"
+                >
+                  <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5 transition-shadow group-hover:shadow-md group-hover:ring-gold/30">
+                    <img
+                      src={sponsor.logo}
+                      alt={sponsor.name}
+                      className="max-h-40 max-w-[12rem] object-contain"
+                    />
+                  </div>
+                  <p className="mt-3 text-center text-sm font-medium text-gray-700 group-hover:text-gold-dark transition-colors">
+                    {sponsor.name}
+                  </p>
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </section>
