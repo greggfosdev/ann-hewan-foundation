@@ -25,7 +25,7 @@ export function OrganizationJsonLd() {
     },
     nonprofitStatus: "Nonprofit501c3",
     sameAs: [
-      "https://www.facebook.com/annhewanfoundation",
+      "https://www.facebook.com/share/g/16yiGqXFW2/",
       "https://www.instagram.com/annhewanfoundation",
     ],
     contactPoint: {

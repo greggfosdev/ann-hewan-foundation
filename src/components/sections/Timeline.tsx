@@ -24,16 +24,16 @@ const milestones = [
       "Reached the milestone of feeding over 150 children breakfast every school day across multiple schools.",
   },
   {
-    year: "2025",
-    title: "Hurricane Melissa Relief",
-    description:
-      "Expanded operations to include emergency relief, helping families recover from Hurricane Melissa.",
-  },
-  {
     year: "2024",
     title: "Playing Fields Project",
     description:
       "Broke ground on community playing fields to provide safe recreational spaces for youth.",
+  },
+  {
+    year: "2025",
+    title: "Hurricane Melissa Relief",
+    description:
+      "Expanded operations to include emergency relief, helping families recover from Hurricane Melissa.",
   },
   {
     year: "2026",

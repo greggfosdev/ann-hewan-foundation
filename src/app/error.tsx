@@ -10,7 +10,10 @@ export default function GlobalError({
   reset: () => void
 }) {
   useEffect(() => {
-    console.error(error)
+    // Log errors in development only
+    if (process.env.NODE_ENV === 'development') {
+      console.error(error)
+    }
   }, [error])
 
   return (
@@ -34,7 +37,7 @@ export default function GlobalError({
           </button>
           <button
             onClick={reset}
-            className="px-4 py-2 text-sm bg-primary-gold text-white rounded-lg hover:bg-primary-gold-dark"
+            className="px-4 py-2 text-sm bg-gold text-white rounded-lg hover:bg-gold-dark"
           >
             Try again
           </button>

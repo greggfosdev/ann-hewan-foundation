@@ -62,7 +62,6 @@ const newsItems = [
   },
 ];
 
-const categories = ["All", "Campaign", "Impact", "Programs", "Updates", "Community"];
 
 const categoryColors: Record<string, string> = {
   Campaign: "bg-gold/10 text-gold-dark",
@@ -90,26 +89,6 @@ export default function NewsPage() {
               The latest updates, impact stories, and news from the Ann Hewan
               Foundation and the Goodwill and surrounding communities.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Category Filter */}
-      <section className="border-b border-gray-200">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="flex flex-wrap items-center justify-center gap-2 py-4">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
-                  category === "All"
-                    ? "bg-gold text-white"
-                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
-              >
-                {category}
-              </button>
-            ))}
           </div>
         </div>
       </section>
@@ -185,12 +164,6 @@ export default function NewsPage() {
             ))}
           </div>
 
-          {/* Load More */}
-          <div className="mt-12 text-center">
-            <button className="rounded-full border-2 border-gray-200 bg-white px-8 py-3 text-sm font-semibold text-gray-700 shadow-sm hover:border-gold hover:text-gold-dark transition-all">
-              Load More Stories
-            </button>
-          </div>
         </div>
       </section>
 
