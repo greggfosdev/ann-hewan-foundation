@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -191,10 +192,13 @@ export default function PlayingFieldsPage() {
                 key={i}
                 className="aspect-[4/3] overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-gray-900/5"
               >
-                <img
+                <Image
                   src={photo.src}
                   alt={photo.alt}
+                  width={800}
+                  height={600}
                   className="h-full w-full object-cover"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
             ))}

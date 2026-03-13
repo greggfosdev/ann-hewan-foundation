@@ -60,9 +60,11 @@ export default function AboutPage() {
                 </p>
                 <h2 className="mt-2 text-2xl font-bold text-gray-900">Our Mission</h2>
                 <p className="mt-4 text-lg text-gray-600">
-                  To empower individuals and strengthen communities through
-                  education, support services, and sustainable development
-                  initiatives in Goodwill and surrounding communities in St. James, Jamaica.
+                  The Ann Hewan Foundation strengthens communities by providing
+                  educational support, essential resources, and outreach assistance
+                  to schools, churches, and underserved individuals and families,
+                  empowering them to achieve stability, opportunity, and long-term
+                  well-being.
                 </p>
               </div>
 

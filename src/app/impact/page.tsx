@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 const impactStats = [
   { label: "Children Fed Daily", value: "150+", description: "Through our Breakfast Project", color: "gold" },
-  { label: "Students Supported", value: "300+", description: "With school supplies and uniforms", color: "ocean" },
+  { label: "Students Supported", value: "300+", description: "With school supplies, uniforms, and textbooks", color: "ocean" },
   { label: "Years of Service", value: "15", description: "Serving Goodwill & surrounding communities", color: "coral" },
   { label: "Meals Served Annually", value: "25,000+", description: "Nutritious breakfasts", color: "gold" },
   { label: "Families Reached", value: "100+", description: "Direct community support", color: "ocean" },
@@ -106,7 +107,7 @@ export default function ImpactPage() {
               },
               {
                 quote:
-                  "Getting school supplies and a new uniform made me feel proud to go to school. I want to study hard and make my community proud.",
+                  "Getting school supplies and help with my uniform and textbooks made me feel proud to go to school. I want to study hard and make my community proud.",
                 name: "Student, Age 12",
                 location: "Goodwill Basic School",
                 color: "ocean",
@@ -300,9 +301,11 @@ export default function ImpactPage() {
                   className="flex flex-col items-center group w-full"
                 >
                   <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5 transition-shadow group-hover:shadow-md group-hover:ring-gold/30">
-                    <img
+                    <Image
                       src={partner.logo}
                       alt={partner.name}
+                      width={192}
+                      height={160}
                       className="max-h-40 max-w-[12rem] object-contain"
                     />
                   </div>
@@ -338,9 +341,11 @@ export default function ImpactPage() {
                   className="flex flex-col items-center group w-full"
                 >
                   <div className="flex h-48 w-48 items-center justify-center rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5 transition-shadow group-hover:shadow-md group-hover:ring-gold/30">
-                    <img
+                    <Image
                       src={sponsor.logo}
                       alt={sponsor.name}
+                      width={192}
+                      height={160}
                       className="max-h-40 max-w-[12rem] object-contain"
                     />
                   </div>
@@ -385,10 +390,13 @@ export default function ImpactPage() {
                 key={i}
                 className="aspect-square overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-gray-900/5"
               >
-                <img
+                <Image
                   src={photo.src}
                   alt={photo.alt}
+                  width={400}
+                  height={400}
                   className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
             ))}

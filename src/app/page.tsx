@@ -1,8 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { ImpactStats } from "@/components/sections/ImpactStats";
 import { ProgramCards } from "@/components/sections/ProgramCards";
-import { NewsletterSignup } from "@/components/sections/NewsletterSignup";
+
 import { DonorWall } from "@/components/sections/DonorWall";
 
 export default function Home() {
@@ -137,11 +138,13 @@ export default function Home() {
             </div>
             <div className="relative">
               {/* Ann Hewan with Founder photo */}
-              <div className="aspect-[2/1] overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5">
-                <img
+              <div className="relative aspect-[2/1] overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5">
+                <Image
                   src="/images/about/ann-hewan-with-founder.webp"
                   alt="Ann Hewan with the founder of the foundation"
-                  className="h-full w-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               <p className="mt-3 text-center text-sm text-gray-500">
@@ -261,8 +264,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter Signup */}
-      <NewsletterSignup />
     </>
   );
 }

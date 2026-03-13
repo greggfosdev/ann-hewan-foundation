@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Timeline } from "@/components/sections/Timeline";
 
@@ -105,11 +106,13 @@ export default function OurStoryPage() {
             </div>
             <div className="relative lg:sticky lg:top-24">
               {/* Ann Hewan with Founder photo */}
-              <div className="overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5">
-                <img
+              <div className="relative overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5 aspect-[2/1]">
+                <Image
                   src="/images/about/ann-hewan-with-founder.webp"
                   alt="Ann Hewan with the founder of the foundation"
-                  className="w-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
               <p className="mt-3 text-center text-sm text-gray-500">
@@ -135,11 +138,11 @@ export default function OurStoryPage() {
                 Our Mission
               </h2>
               <p className="mt-6 text-lg leading-8 text-gray-600">
-                Our mission is to uplift the people of our community, by providing
-                schools, churches, and those in need with adequate resources to
-                help promote prosperity. By doing so we are committed to inspire
-                and empower the youth to uphold Ann Hewan&apos;s 7 Pillars of
-                Community.
+                The Ann Hewan Foundation strengthens communities by providing
+                educational support, essential resources, and outreach assistance
+                to schools, churches, and underserved individuals and families,
+                empowering them to achieve stability, opportunity, and long-term
+                well-being.
               </p>
             </div>
           </div>
@@ -300,11 +303,13 @@ export default function OurStoryPage() {
 
           {/* Founder - Featured */}
           <div className="mx-auto mt-16 max-w-sm text-center">
-            <div className="mx-auto h-72 w-56 overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/5">
-              <img
-                src="/images/about/founder.webp"
+            <div className="relative mx-auto h-96 w-72 overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/5">
+              <Image
+                src="/images/about/founder.jpg"
                 alt="Edgar Pete Peters - Founder & President"
-                className="h-full w-full object-cover object-top"
+                fill
+                className="object-contain"
+                sizes="288px"
               />
             </div>
             <h3 className="mt-6 text-xl font-semibold text-gray-900">
@@ -395,11 +400,13 @@ export default function OurStoryPage() {
 
                 {/* Photo - Pete with Congressman Soto */}
                 <div className="w-full lg:w-2/5 flex-shrink-0">
-                  <div className="overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/5">
-                    <img
+                  <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/5 aspect-[4/3]">
+                    <Image
                       src="/images/recognition/pete-congressman-soto.webp"
                       alt="Edgar Pete Peters receiving recognition from Congressman Darren Soto at the Caribbean Heritage Month event"
-                      className="w-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 40vw"
                     />
                   </div>
                   <p className="mt-3 text-center text-sm text-gray-500">
@@ -410,18 +417,22 @@ export default function OurStoryPage() {
 
               {/* Documents */}
               <div className="mt-10 grid gap-6 sm:grid-cols-2">
-                <div className="overflow-hidden rounded-xl shadow-md ring-1 ring-gray-900/5">
-                  <img
+                <div className="relative overflow-hidden rounded-xl shadow-md ring-1 ring-gray-900/5 aspect-[3/4]">
+                  <Image
                     src="/images/recognition/congressional-record.webp"
                     alt="Congressional Record honoring Edgar Pete Peters as a Distinguished Leader in Central Florida for Caribbean Heritage Month"
-                    className="w-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
-                <div className="overflow-hidden rounded-xl shadow-md ring-1 ring-gray-900/5">
-                  <img
+                <div className="relative overflow-hidden rounded-xl shadow-md ring-1 ring-gray-900/5 aspect-[3/4]">
+                  <Image
                     src="/images/recognition/congressional-invitation.webp"
                     alt="Official invitation letter from Congressman Darren Soto for the Caribbean Heritage Month event"
-                    className="w-full object-cover"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 50vw"
                   />
                 </div>
               </div>

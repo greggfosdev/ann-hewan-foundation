@@ -1,10 +1,11 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Back 2 School Initiative",
   description:
-    "Providing school supplies and assisting students with uniforms and educational resources, supporting over 300 students annually.",
+    "Providing school supplies, assisting with uniforms for students transitioning to high school, and helping with textbooks and educational resources, supporting over 300 students annually.",
 };
 
 const stats = [
@@ -18,7 +19,7 @@ const features = [
   {
     title: "School Uniform Distribution",
     description:
-      "Every child receives a complete school uniform, allowing them to attend school with pride and confidence.",
+      "We assist kids in transitioning to high school by meeting uniform needs, allowing them to attend school with pride and confidence.",
   },
   {
     title: "Backpacks & Supplies",
@@ -28,7 +29,7 @@ const features = [
   {
     title: "Textbooks & Learning Materials",
     description:
-      "Students receive the textbooks and educational materials they need to succeed in their studies.",
+      "We assist kids with the purchase of textbooks and educational materials they need to succeed in their studies.",
   },
   {
     title: "Shoes & Essential Items",
@@ -90,8 +91,9 @@ export default function BackToSchoolPage() {
             </h1>
             <p className="mt-6 text-xl leading-8 text-gray-600">
               Every child deserves to start the school year with pride. We
-              provide school supplies and assist students with uniforms and
-              educational resources, supporting over 300 students annually.
+              provide school supplies, assist students transitioning to high
+              school with uniforms, and help with the purchase of textbooks
+              and educational resources, supporting over 300 students annually.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
@@ -149,10 +151,13 @@ export default function BackToSchoolPage() {
                 key={i}
                 className="aspect-[3/4] overflow-hidden rounded-xl bg-sand shadow-sm ring-1 ring-gray-900/5"
               >
-                <img
+                <Image
                   src={photo.src}
                   alt={photo.alt}
+                  width={600}
+                  height={800}
                   className="h-full w-full object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
                 />
               </div>
             ))}
@@ -187,11 +192,13 @@ export default function BackToSchoolPage() {
               <h2 className="text-2xl font-bold text-gray-900">Our Solution</h2>
               <p className="mt-4 text-lg text-gray-600">
                 Each year before school starts, we host our Back 2 School
-                distribution event where children receive everything they need
-                for the school year: uniforms, backpacks, supplies, and shoes.
+                distribution event where children receive what they need
+                for the school year: backpacks, supplies, and shoes. We also
+                assist students transitioning to high school with uniforms
+                and help with the purchase of textbooks.
               </p>
               <p className="mt-4 text-lg text-gray-600">
-                By providing supplies and assisting with these essentials, we remove barriers to education
+                By providing supplies and assisting with uniforms and textbooks, we remove barriers to education
                 and ensure every child can start the school year with confidence
                 and pride. The joy on their faces during distribution day is
                 unforgettable.
@@ -240,8 +247,8 @@ export default function BackToSchoolPage() {
               Back 2 School 2026
             </h2>
             <p className="mt-4 text-lg text-ocean-light">
-              Help us provide school supplies and assist 200+ students with
-              uniforms this academic year.
+              Help us provide school supplies, assist with uniforms, and
+              help with textbooks for 200+ students this academic year.
             </p>
 
             {/* Progress bar */}
@@ -303,7 +310,7 @@ export default function BackToSchoolPage() {
             </h2>
             <p className="mt-6 text-lg text-gray-600">
               <strong className="text-ocean">$50</strong> provides a student with
-              supplies and assists with a uniform.{" "}
+              supplies and assists with a uniform or textbooks.{" "}
               <strong className="text-ocean">$100</strong> covers everything a
               student needs for the year.
             </p>

@@ -192,7 +192,7 @@ export default function ContactPage() {
                 <h2 className="text-xl font-bold text-gray-900">
                   Send Us a Message
                 </h2>
-                <form className="mt-8 space-y-6" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <form className="mt-8 space-y-6" action="https://formspree.io/f/xyknjrab" method="POST">
                   <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                     <div>
                       <label

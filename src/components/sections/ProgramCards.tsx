@@ -58,7 +58,7 @@ const programs: Program[] = [
   {
     name: "Back 2 School Initiative",
     description:
-      "Equipping students with school supplies, uniforms, and educational resources to support their academic success.",
+      "Equipping students with school supplies, assisting with uniforms for those transitioning to high school, and helping with the purchase of textbooks.",
     href: "/programs/back-to-school",
     color: "ocean",
     icon: (

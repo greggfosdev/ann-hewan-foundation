@@ -99,11 +99,14 @@ export function Hero({
 
         {/* Hero Image */}
         <div className="relative mx-auto max-w-5xl pb-8">
-          <div className="aspect-[2/1] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/5">
-            <img
+          <div className="relative aspect-[2/1] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/5">
+            <Image
               src="/images/hero/children-hero.webp"
               alt="Smiling children in school uniforms from the Goodwill community in Jamaica"
-              className="h-full w-full object-cover"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 1024px"
             />
           </div>
 

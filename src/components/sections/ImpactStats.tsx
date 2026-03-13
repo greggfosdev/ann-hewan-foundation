@@ -132,7 +132,7 @@ export function ImpactStats() {
               Back 2 School 2026
             </p>
             <p className="mt-2 text-ocean-light">
-              Help us provide school supplies and assist 200+ students with uniforms
+              Help us provide school supplies, assist with uniforms, and help with textbooks for 200+ students
             </p>
 
             <div className="mt-6">

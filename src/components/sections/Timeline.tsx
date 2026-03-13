@@ -3,7 +3,7 @@ const milestones = [
     year: "2010",
     title: "Foundation Established",
     description:
-      "Edgar 'Pete' Peters founded the Ann Hewan Foundation in memory of his mother, continuing her legacy of community service.",
+      "Edgar 'Pete' Peters founded The Ann Hewan Foundation in memory of his Grandmother, continuing her legacy of community service.",
   },
   {
     year: "2011",
@@ -15,7 +15,7 @@ const milestones = [
     year: "2015",
     title: "Back 2 School Initiative",
     description:
-      "Launched our annual back-to-school program, providing uniforms and supplies to hundreds of students.",
+      "Launched our annual back-to-school program, providing supplies and assisting with uniforms and textbooks for hundreds of students.",
   },
   {
     year: "2018",

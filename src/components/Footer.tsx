@@ -202,36 +202,6 @@ export function Footer() {
                   ))}
                 </ul>
               </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                  Newsletter
-                </h3>
-                <p className="mt-4 text-sm text-gray-600">
-                  Get updates on our programs and impact.
-                </p>
-                <form className="mt-4">
-                  <label htmlFor="footer-email" className="sr-only">
-                    Email address
-                  </label>
-                  <div className="flex flex-col gap-2">
-                    <input
-                      type="email"
-                      name="email"
-                      id="footer-email"
-                      autoComplete="email"
-                      required
-                      className="w-full rounded-lg border-0 px-3 py-2 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold"
-                      placeholder="Enter your email"
-                    />
-                    <button
-                      type="submit"
-                      className="rounded-lg bg-gold px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gold-dark transition-colors"
-                    >
-                      Subscribe
-                    </button>
-                  </div>
-                </form>
-              </div>
             </div>
           </div>
         </div>
@@ -251,7 +221,7 @@ export function Footer() {
           </div>
           <p className="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
             &copy; {new Date().getFullYear()} The Ann Hewan Foundation. All
-            rights reserved. 501(c)(3) EIN: XX-XXXXXXX
+            rights reserved.
           </p>
         </div>
       </div>

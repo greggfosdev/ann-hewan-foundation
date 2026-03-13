@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -133,18 +134,22 @@ export default function BreakfastProjectPage() {
 
           {/* Photo Grid */}
           <div className="mx-auto mt-12 grid max-w-5xl gap-8 lg:grid-cols-2">
-            <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray-900/10">
-              <img
+            <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray-900/10 aspect-[4/3]">
+              <Image
                 src="/images/breakfast/breakfast-1.webp"
                 alt="Children in school uniforms enjoying breakfast together at a table with red tablecloth"
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray-900/10">
-              <img
+            <div className="relative overflow-hidden rounded-2xl shadow-lg ring-1 ring-gray-900/10 aspect-[4/3]">
+              <Image
                 src="/images/breakfast/breakfast-2.webp"
                 alt="Students drinking from cups during the morning breakfast program"
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
           </div>

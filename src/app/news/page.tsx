@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "News & Stories",
@@ -11,7 +10,7 @@ const newsItems = [
     id: 1,
     title: "Back 2 School 2026 Campaign Launches",
     excerpt:
-      "We're excited to announce the launch of our annual Back 2 School campaign, aiming to provide school supplies and uniforms to over 100 students in Goodwill and surrounding communities.",
+      "We're excited to announce the launch of our annual Back 2 School campaign, aiming to provide school supplies, assist with uniforms, and help with textbooks for over 100 students in Goodwill and surrounding communities.",
     date: "January 15, 2026",
     category: "Campaign",
     image: null,
@@ -195,42 +194,6 @@ export default function NewsPage() {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="bg-gradient-to-br from-ocean to-ocean-dark py-16">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              Never Miss an Update
-            </h2>
-            <p className="mt-4 text-lg text-ocean-light">
-              Subscribe to our newsletter to receive the latest news and stories
-              directly in your inbox.
-            </p>
-            <form className="mt-8 sm:mx-auto sm:max-w-md">
-              <div className="flex flex-col gap-4 sm:flex-row">
-                <label htmlFor="news-email" className="sr-only">
-                  Email address
-                </label>
-                <input
-                  type="email"
-                  id="news-email"
-                  name="email"
-                  autoComplete="email"
-                  required
-                  className="flex-1 rounded-full border-0 px-6 py-3.5 text-gray-900 shadow-sm placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold"
-                  placeholder="Enter your email"
-                />
-                <button
-                  type="submit"
-                  className="rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gold/30 hover:bg-gold-dark hover:shadow-gold/40 transition-all"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
