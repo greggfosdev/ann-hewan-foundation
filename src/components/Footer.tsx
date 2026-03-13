@@ -11,7 +11,6 @@ const footerNavigation = {
   organization: [
     { name: "Our Story", href: "/our-story" },
     { name: "Impact", href: "/impact" },
-    { name: "News & Stories", href: "/news" },
     { name: "Contact", href: "/contact" },
   ],
   getInvolved: [
