@@ -118,10 +118,10 @@ export default function ContactPage() {
                   <div>
                     <p className="font-medium text-gray-900">Email</p>
                     <a
-                      href="mailto:info@theannhewanfoundation.org"
+                      href="mailto:Annhewanfoundation@gmail.com"
                       className="mt-1 block text-sm text-gold-dark hover:text-gold transition-colors"
                     >
-                      info@theannhewanfoundation.org
+                      Annhewanfoundation@gmail.com
                     </a>
                   </div>
                 </div>
