@@ -5,6 +5,7 @@ import { ImpactStats } from "@/components/sections/ImpactStats";
 import { ProgramCards } from "@/components/sections/ProgramCards";
 
 import { DonorWall } from "@/components/sections/DonorWall";
+import { RafflePromo } from "@/components/sections/RafflePromo";
 
 export default function Home() {
   return (
@@ -234,6 +235,9 @@ export default function Home() {
 
       {/* Donor Wall */}
       <DonorWall />
+
+      {/* Raffle Promo */}
+      <RafflePromo />
 
       {/* Get Involved CTA */}
       <section className="bg-sand py-24 sm:py-32">

@@ -11,6 +11,7 @@ const navigation = [
   { name: "Programs", href: "/programs" },
   { name: "Impact", href: "/impact" },
   { name: "Get Involved", href: "/get-involved" },
+  { name: "Raffles", href: "/raffles" },
   { name: "Contact", href: "/contact" },
 ];
 

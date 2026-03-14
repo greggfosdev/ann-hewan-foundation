@@ -15,6 +15,7 @@ const footerNavigation = {
   ],
   getInvolved: [
     { name: "Donate", href: "/donate" },
+    { name: "Raffles", href: "/raffles" },
     { name: "Volunteer", href: "/get-involved#volunteer" },
     { name: "Corporate Partners", href: "/get-involved#partners" },
     { name: "Fundraise", href: "/get-involved#fundraise" },

@@ -1,7 +1,23 @@
 import { MetadataRoute } from "next";
+import { getAllRaffles } from "@/data/raffles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://theannhewanfoundation.org";
+
+  const raffleEntries: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/raffles`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    },
+    ...getAllRaffles().map((raffle) => ({
+      url: `${baseUrl}/raffles/${raffle.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
+  ];
 
   return [
     {
@@ -88,5 +104,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    ...raffleEntries,
   ];
 }
