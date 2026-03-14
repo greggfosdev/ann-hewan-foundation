@@ -240,6 +240,35 @@ export default async function RaffleDetailPage({ params }: PageProps) {
         </div>
       </section>
 
+      {/* Share This Raffle */}
+      {isActive && (
+        <section className="py-12 sm:py-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-sm text-center">
+              <h2 className="text-xl font-bold text-gray-900">
+                Share This Raffle
+              </h2>
+              <p className="mt-2 text-sm text-gray-600">
+                Know someone who&apos;d want to enter? Share the QR code below
+                — screenshot it, print it, or send it to a friend.
+              </p>
+              <div className="mt-6 inline-block rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5">
+                <Image
+                  src="/images/raffles/petes-raffle-qr-code.png"
+                  alt="QR code to purchase raffle tickets"
+                  width={200}
+                  height={200}
+                  className="mx-auto"
+                />
+              </div>
+              <p className="mt-3 text-xs text-gray-400">
+                Scan to purchase tickets on your phone
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Beneficiary CTA */}
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
