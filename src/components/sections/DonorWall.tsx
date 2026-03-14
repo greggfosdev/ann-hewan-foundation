@@ -1,11 +1,3 @@
-const recentDonors = [
-  { initials: "JW", name: "Jennifer W.", amount: "$100", time: "2 hours ago" },
-  { initials: "MR", name: "Michael R.", amount: "$50", time: "5 hours ago" },
-  { initials: "SC", name: "Sarah C.", amount: "$250", time: "1 day ago" },
-  { initials: "AP", name: "Anonymous", amount: "$500", time: "2 days ago" },
-  { initials: "DL", name: "David L.", amount: "$75", time: "3 days ago" },
-];
-
 const impactStats = [
   { label: "Total Raised This Year", value: "$3,500" },
   { label: "Donors This Month", value: "7" },
@@ -29,40 +21,7 @@ export function DonorWall() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-2">
-          {/* Recent Activity */}
-          <div className="rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-900/5">
-            <h3 className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-trust-green opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-trust-green"></span>
-              </span>
-              Recent Donations
-            </h3>
-            <div className="mt-6 space-y-4">
-              {recentDonors.map((donor, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-between py-3 border-b border-gray-100 last:border-0"
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gold/10 text-gold-dark font-semibold text-sm">
-                      {donor.initials}
-                    </div>
-                    <div>
-                      <p className="font-medium text-gray-900">{donor.name}</p>
-                      <p className="text-xs text-gray-500">{donor.time}</p>
-                    </div>
-                  </div>
-                  <span className="font-semibold text-trust-green">
-                    {donor.amount}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Impact Stats */}
+        <div className="mt-16 mx-auto max-w-xl">
           <div className="space-y-6">
             {impactStats.map((stat) => (
               <div
