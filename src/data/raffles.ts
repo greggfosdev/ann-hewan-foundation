@@ -44,8 +44,8 @@ const raffles: Raffle[] = [
     description:
       "Join our raffle for a chance to win a $500.00 Visa Gift Card while supporting our mission. Each ticket purchase directly contributes to The Ann Hewan Foundation's community impact efforts — providing school supplies and resources for children in Goodwill and surrounding communities in St. James, Jamaica.",
     status: "active",
-    drawDate: "2025-08-15T18:00:00Z",
-    startDate: "2025-06-01T00:00:00Z",
+    drawDate: "2026-08-15T18:00:00Z",
+    startDate: "2026-06-01T00:00:00Z",
     zeffyUrl:
       "https://www.zeffy.com/ticketing/petes-10th-annual-back-to-school-raffle",
     zeffyEmbedUrl:
