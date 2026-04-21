@@ -359,6 +359,150 @@ export default function ImpactPage() {
         </div>
       </section>
 
+      {/* Community Events */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-coral">
+              On the Ground
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Community Events
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Moments from our work in Goodwill and surrounding communities.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-16 max-w-5xl space-y-20">
+            {[
+              {
+                slug: "ice-cream-social-2026",
+                title: "School Ice Cream Social",
+                date: "February 2026",
+                description:
+                  "The Ann Hewan Foundation brought an ice cream treat directly into classrooms at partner schools in Jamaica — a small moment of joy for students, and a thank-you to the teachers who show up every day.",
+                videos: [
+                  {
+                    src: "/videos/ice-cream-social-2026/video-01.mp4",
+                    poster: "/images/impact/ice-cream-social-2026/video-01-poster.jpg",
+                    label: "Inside the classroom — blue-wall primary school",
+                  },
+                  {
+                    src: "/videos/ice-cream-social-2026/video-02.mp4",
+                    poster: "/images/impact/ice-cream-social-2026/video-02-poster.jpg",
+                    label: "Inside the classroom — upper primary school",
+                  },
+                ],
+                photos: [
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-01.jpg",
+                    alt: "Wide view of a Jamaican primary classroom with blue walls and white breeze-block windows; students in tan uniforms sit at desks with cups of ice cream.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-02.jpg",
+                    alt: "Students in tan primary-school uniforms seated at desks with ice cream cups, smiling toward the camera.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-03.jpg",
+                    alt: "A teacher in a checked shirt stands among rows of students in tan uniforms enjoying ice cream at their desks.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-04.jpg",
+                    alt: "Students in tan uniforms work at their desks with textbooks open and ice cream cups beside them.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-05.jpg",
+                    alt: "A teacher walks between desks while students in tan uniforms hold up their ice cream cups.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-06.jpg",
+                    alt: "Students in white tops and navy pinafores eat ice cream at shared desk pods; colorful educational posters line the walls.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-07.jpg",
+                    alt: "Rows of students in navy-and-white uniforms with ice cream cups; a world map is visible on the back wall.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-08.jpg",
+                    alt: "Students in navy pinafores and white tops smile and hold up ice cream cups in a classroom lined with educational posters.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-09.jpg",
+                    alt: "A group of students eating ice cream at their desks, with books and backpacks beside them.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-10.jpg",
+                    alt: "Students in white and navy uniforms seated at desk pods, spoons raised, enjoying their ice cream.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-11.jpg",
+                    alt: "Young students look up from their schoolwork with ice cream cups in hand, a colorful classroom display behind them.",
+                  },
+                  {
+                    src: "/images/impact/ice-cream-social-2026/social-12.jpg",
+                    alt: "A teacher at the front of the classroom while students in navy-and-white uniforms eat ice cream at their desks.",
+                  },
+                ],
+              },
+            ].map((event) => (
+              <div key={event.slug}>
+                <div className="mx-auto max-w-3xl text-center">
+                  <p className="text-sm font-medium text-gold">{event.date}</p>
+                  <h3 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                    {event.title}
+                  </h3>
+                  <p className="mt-4 text-base leading-7 text-gray-600">
+                    {event.description}
+                  </p>
+                </div>
+
+                {event.videos && event.videos.length > 0 && (
+                  <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    {event.videos.map((video) => (
+                      <figure
+                        key={video.src}
+                        className="overflow-hidden rounded-xl bg-black shadow-sm ring-1 ring-gray-900/5"
+                      >
+                        <video
+                          controls
+                          preload="metadata"
+                          playsInline
+                          poster={video.poster}
+                          className="h-full w-full"
+                          aria-label={video.label}
+                        >
+                          <source src={video.src} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </figure>
+                    ))}
+                  </div>
+                )}
+
+                <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                  {event.photos.map((photo) => (
+                    <div
+                      key={photo.src}
+                      className="aspect-square overflow-hidden rounded-xl bg-white shadow-sm ring-1 ring-gray-900/5"
+                    >
+                      <Image
+                        src={photo.src}
+                        alt={photo.alt}
+                        width={400}
+                        height={400}
+                        className="h-full w-full object-cover hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery Preview */}
       <section className="bg-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
