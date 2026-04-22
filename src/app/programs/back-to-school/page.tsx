@@ -169,6 +169,80 @@ export default function BackToSchoolPage() {
         </div>
       </section>
 
+      {/* 2025 Back to School Event */}
+      <section className="bg-cream py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-medium text-gold">August 2025</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              2025 Back 2 School Event
+            </h2>
+            <p className="mt-4 text-base leading-7 text-gray-600">
+              Another year sending students back to class with everything they
+              need. The Ann Hewan Foundation joined the Goodwill School Alumni
+              Foundation as sponsor for the 2025 distribution — supply tents
+              in the community, a formal ceremony to recognize students
+              transitioning to high school, and a team who made it all happen.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
+            {[
+              {
+                src: "/videos/back-to-school/video-01.mp4",
+                poster: "/images/back-to-school/video-01-poster.jpg",
+                label: "A moment from the 2025 Back 2 School event",
+              },
+              {
+                src: "/videos/back-to-school/video-02.mp4",
+                poster: "/images/back-to-school/video-02-poster.jpg",
+                label: "A moment from the 2025 Back 2 School event",
+              },
+            ].map((video) => (
+              <figure
+                key={video.src}
+                className="overflow-hidden rounded-xl bg-black shadow-sm ring-1 ring-gray-900/5"
+              >
+                <video
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={video.poster}
+                  className="h-full w-full"
+                  aria-label={video.label}
+                >
+                  <source src={video.src} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </figure>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-6 grid max-w-4xl grid-cols-2 gap-4 lg:grid-cols-4">
+            {[
+              { src: "/images/back-to-school/school-5.jpg", alt: "Community members gathered under a blue pop-up tent as volunteers sign students up and distribute school supplies at an outdoor Back 2 School event" },
+              { src: "/images/back-to-school/school-6.jpg", alt: "Organizers outside the stone church venue on distribution day, including a woman in a yellow dress greeting arrivals" },
+              { src: "/images/back-to-school/school-7.jpg", alt: "Members of the Foundation and Goodwill School Alumni Foundation team posing on the steps of the event venue" },
+              { src: "/images/back-to-school/school-8.jpg", alt: "Indoor ceremony beneath a Goodwill School Alumni Foundation banner listing The Ann Hewan Foundation as a sponsor; a host addresses seated students and families" },
+            ].map((photo, i) => (
+              <div
+                key={i}
+                className="aspect-[3/4] overflow-hidden rounded-xl bg-sand shadow-sm ring-1 ring-gray-900/5"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={600}
+                  height={800}
+                  className="h-full w-full object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* The Problem & Solution */}
       <section className="bg-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
