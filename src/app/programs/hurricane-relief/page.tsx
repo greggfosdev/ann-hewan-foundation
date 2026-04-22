@@ -203,7 +203,23 @@ export default function HurricaneReliefPage() {
             </p>
           </div>
 
-          <div className="mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 lg:grid-cols-4">
+          <div className="mx-auto mt-12 max-w-sm">
+            <figure className="overflow-hidden rounded-xl bg-black shadow-sm ring-1 ring-gray-900/5">
+              <video
+                controls
+                preload="metadata"
+                playsInline
+                poster="/images/hurricane-relief/video-01-poster.jpg"
+                className="h-full w-full"
+                aria-label="A moment from the Hurricane Melissa relief distribution — a foundation volunteer and partner with a young child on the steps of a community building"
+              >
+                <source src="/videos/hurricane-relief/video-01.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </figure>
+          </div>
+
+          <div className="mx-auto mt-8 grid max-w-4xl grid-cols-2 gap-4 lg:grid-cols-4">
             {[
               { src: "/images/hurricane-relief/relief-1.jpg", alt: "Volunteer handing relief supplies to a young child in the community" },
               { src: "/images/hurricane-relief/relief-2.jpg", alt: "Community members gathering at distribution point for hurricane relief supplies" },
@@ -213,6 +229,14 @@ export default function HurricaneReliefPage() {
               { src: "/images/hurricane-relief/relief-6.jpg", alt: "Community members receiving emergency supplies after Hurricane Melissa" },
               { src: "/images/hurricane-relief/relief-7.jpg", alt: "Relief distribution efforts in the community following Hurricane Melissa" },
               { src: "/images/hurricane-relief/relief-8.jpg", alt: "Community members gathered for hurricane relief supply distribution" },
+              { src: "/images/hurricane-relief/relief-9.jpg", alt: "Foundation members arriving in Jamaica, partnering with Giving 4 Hope to coordinate hurricane relief" },
+              { src: "/images/hurricane-relief/relief-10.jpg", alt: "Volunteer in a Giving 4 Hope shirt handing a blue supply bag to children beside a Jamaica Tours Limited bus" },
+              { src: "/images/hurricane-relief/relief-11.jpg", alt: "Volunteer at the Jamaica Tours bus handing drinking water and supplies to two children after the storm, damaged trees visible in the background" },
+              { src: "/images/hurricane-relief/relief-12.jpg", alt: "A foundation volunteer and partner hold and comfort a young child on the steps of a blue-and-yellow building during distribution day" },
+              { src: "/images/hurricane-relief/relief-13.jpg", alt: "Community members waiting in line at the Jamaica Tours bus for relief supplies, with hurricane-damaged trees and homes visible behind" },
+              { src: "/images/hurricane-relief/relief-14.jpg", alt: "Large community gathering outside a school building awaiting distribution, overcast post-storm sky" },
+              { src: "/images/hurricane-relief/relief-15.jpg", alt: "Team portrait of the foundation and Giving 4 Hope relief crew in front of the Jamaica Tours bus" },
+              { src: "/images/hurricane-relief/relief-16.jpg", alt: "Community members waiting at an assembly-point distribution area with relief drawstring bags; stripped trees in the background show the storm's aftermath" },
             ].map((photo, i) => (
               <div
                 key={i}
