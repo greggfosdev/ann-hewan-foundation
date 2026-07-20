@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getUpcomingEvent } from "@/data/events";
+
+// Revalidate daily so the upcoming-event callout expires without a redeploy.
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   title: "Back 2 School Initiative",
@@ -44,6 +48,8 @@ const features = [
 ];
 
 export default function BackToSchoolPage() {
+  const upcomingEvent = getUpcomingEvent();
+
   return (
     <>
       {/* Hero */}
@@ -106,6 +112,41 @@ export default function BackToSchoolPage() {
           </div>
         </div>
       </section>
+
+      {/* Upcoming Event Callout */}
+      {upcomingEvent && upcomingEvent.programSlug === "back-to-school" && (
+        <section className="bg-white pt-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-4xl rounded-2xl bg-gradient-to-r from-ocean to-ocean-dark p-8 text-white sm:p-10">
+              <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
+                <div>
+                  <p className="text-sm font-medium uppercase tracking-wider text-ocean-light">
+                    Upcoming Event
+                  </p>
+                  <p className="mt-2 text-2xl font-bold">
+                    {upcomingEvent.title}
+                  </p>
+                  <p className="mt-2 text-ocean-light">
+                    {upcomingEvent.displayDate} at {upcomingEvent.displayTime} ·{" "}
+                    {upcomingEvent.location}
+                  </p>
+                  <p className="mt-1 text-sm text-ocean-light">
+                    {upcomingEvent.admission}
+                  </p>
+                </div>
+                <a
+                  href={upcomingEvent.flyerImage}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-none rounded-full bg-white px-6 py-3 text-sm font-semibold text-ocean-dark shadow-sm hover:bg-cream transition-colors"
+                >
+                  View the Flyer
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Impact Stats */}
       <section className="bg-white py-16">

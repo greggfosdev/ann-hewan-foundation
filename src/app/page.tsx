@@ -7,12 +7,20 @@ import { ProgramCards } from "@/components/sections/ProgramCards";
 
 import { DonorWall } from "@/components/sections/DonorWall";
 import { RafflePromo } from "@/components/sections/RafflePromo";
+import { EventPromo } from "@/components/sections/EventPromo";
+
+// Revalidate daily so time-boxed sections (events, raffles) appear and
+// expire without needing a redeploy.
+export const revalidate = 86400;
 
 export default function Home() {
   return (
     <>
       {/* Hero Section with Donation CTA */}
       <Hero />
+
+      {/* Upcoming Event */}
+      <EventPromo />
 
       {/* Impact Statistics */}
       <ImpactStats />

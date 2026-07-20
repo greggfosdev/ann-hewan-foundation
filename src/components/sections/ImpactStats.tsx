@@ -121,37 +121,6 @@ export function ImpactStats() {
             </div>
           ))}
         </dl>
-
-        {/* Progress towards current goal */}
-        <div className="mt-16 mx-auto max-w-2xl">
-          <div className="rounded-2xl bg-gradient-to-r from-ocean to-ocean-dark p-8 text-center text-white">
-            <p className="text-sm font-medium text-ocean-light uppercase tracking-wider">
-              Current Goal
-            </p>
-            <p className="mt-2 text-2xl font-bold">
-              Back 2 School 2026
-            </p>
-            <p className="mt-2 text-ocean-light">
-              Help us provide school supplies, assist with uniforms, and help with textbooks for 200+ students
-            </p>
-
-            <div className="mt-6">
-              <div className="flex justify-between text-sm">
-                <span className="font-medium">$875 raised</span>
-                <span className="text-ocean-light">$10,000 goal</span>
-              </div>
-              <div className="mt-2 h-3 w-full overflow-hidden rounded-full bg-white/20">
-                <div
-                  className="h-full rounded-full bg-gold transition-all duration-1000"
-                  style={{ width: "9%" }}
-                />
-              </div>
-              <p className="mt-2 text-sm text-ocean-light">
-                9% complete
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
