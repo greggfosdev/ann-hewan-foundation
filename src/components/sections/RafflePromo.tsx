@@ -1,5 +1,9 @@
 import Link from "next/link";
-import { getActiveRaffle, hasActiveRaffle } from "@/data/raffles";
+import {
+  formatRaffleDateTime,
+  getActiveRaffle,
+  hasActiveRaffle,
+} from "@/data/raffles";
 import { CountdownTimer } from "@/components/ui/CountdownTimer";
 
 export function RafflePromo() {
@@ -25,8 +29,12 @@ export function RafflePromo() {
             </p>
           )}
 
-          <div className="mt-8 flex justify-center">
-            <CountdownTimer targetDate={raffle.drawDate} />
+          <div className="mt-8 flex flex-col items-center gap-3">
+            <CountdownTimer targetDate={raffle.endDate} />
+            <p className="text-sm text-gray-500">
+              Entries close {formatRaffleDateTime(raffle.endDate)} · Drawing{" "}
+              {formatRaffleDateTime(raffle.drawDate)}
+            </p>
           </div>
 
           <div className="mt-8">

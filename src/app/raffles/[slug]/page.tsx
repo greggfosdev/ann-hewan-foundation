@@ -2,7 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { getAllRaffles, getRaffleBySlug } from "@/data/raffles";
+import {
+  formatRaffleDate,
+  formatRaffleDateTime,
+  getAllRaffles,
+  getRaffleBySlug,
+} from "@/data/raffles";
 import { CountdownTimer } from "@/components/ui/CountdownTimer";
 import { RaffleStatusBadge } from "@/components/ui/RaffleStatusBadge";
 
@@ -55,12 +60,7 @@ export default async function RaffleDetailPage({ params }: PageProps) {
             <div className="flex items-center justify-center gap-3">
               <RaffleStatusBadge status={raffle.status} />
               <span className="rounded-full bg-gray-100 px-4 py-1.5 text-sm font-medium text-gray-600">
-                Drawing{" "}
-                {new Date(raffle.drawDate).toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
+                Drawing {formatRaffleDate(raffle.drawDate)}
               </span>
             </div>
             <h1 className="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -68,8 +68,12 @@ export default async function RaffleDetailPage({ params }: PageProps) {
             </h1>
             <p className="mt-4 text-lg text-gray-600">{raffle.subtitle}</p>
             {isActive && (
-              <div className="mt-8 flex justify-center">
-                <CountdownTimer targetDate={raffle.drawDate} />
+              <div className="mt-8 flex flex-col items-center gap-3">
+                <CountdownTimer targetDate={raffle.endDate} />
+                <p className="text-sm text-gray-500">
+                  Entries close {formatRaffleDateTime(raffle.endDate)} · Drawing{" "}
+                  {formatRaffleDateTime(raffle.drawDate)}
+                </p>
               </div>
             )}
           </div>

@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 
 interface CountdownTimerProps {
   targetDate: string;
+  /** Shown once the target passes */
+  expiredLabel?: string;
 }
 
 interface TimeLeft {
@@ -24,7 +26,10 @@ function calculateTimeLeft(targetDate: string): TimeLeft | null {
   };
 }
 
-export function CountdownTimer({ targetDate }: CountdownTimerProps) {
+export function CountdownTimer({
+  targetDate,
+  expiredLabel = "Entries Closed",
+}: CountdownTimerProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
   const [mounted, setMounted] = useState(false);
 
@@ -64,7 +69,7 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
             clipRule="evenodd"
           />
         </svg>
-        Drawing Complete
+        {expiredLabel}
       </div>
     );
   }

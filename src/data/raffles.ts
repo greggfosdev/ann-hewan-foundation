@@ -20,6 +20,9 @@ export interface Raffle {
   subtitle: string;
   description: string;
   status: RaffleStatus;
+  /** Last moment tickets can be bought, ISO 8601 with offset */
+  endDate: string;
+  /** When the winner is drawn, ISO 8601 with offset */
   drawDate: string;
   startDate: string;
   zeffyUrl: string;
@@ -44,7 +47,8 @@ const raffles: Raffle[] = [
     description:
       "Join our raffle for a chance to win a $500.00 Visa Gift Card while supporting our mission. Each ticket purchase directly contributes to The Ann Hewan Foundation's community impact efforts — providing school supplies and resources for children in Goodwill and surrounding communities in St. James, Jamaica.",
     status: "active",
-    drawDate: "2026-08-15T18:00:00Z",
+    endDate: "2026-08-06T23:59:00-04:00",
+    drawDate: "2026-08-07T12:00:00-04:00",
     startDate: "2026-06-01T00:00:00Z",
     zeffyUrl:
       "https://www.zeffy.com/ticketing/petes-10th-annual-back-to-school-raffle",
@@ -91,4 +95,29 @@ export function hasActiveRaffle(): boolean {
 
 export function getAllRaffles(): Raffle[] {
   return raffles;
+}
+
+/**
+ * Raffle dates are set in Eastern Time, so format them in it. The entry
+ * deadline sits one minute before midnight and would otherwise render as the
+ * following day for anyone viewing from a timezone east of ET.
+ */
+const RAFFLE_TIME_ZONE = "America/New_York";
+
+export function formatRaffleDate(iso: string): string {
+  return new Date(iso).toLocaleDateString("en-US", {
+    timeZone: RAFFLE_TIME_ZONE,
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+}
+
+export function formatRaffleDateTime(iso: string): string {
+  const time = new Date(iso).toLocaleTimeString("en-US", {
+    timeZone: RAFFLE_TIME_ZONE,
+    hour: "numeric",
+    minute: "2-digit",
+  });
+  return `${formatRaffleDate(iso)} at ${time} ET`;
 }

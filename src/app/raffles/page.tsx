@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import { getActiveRaffle, getPastRaffles } from "@/data/raffles";
+import {
+  formatRaffleDate,
+  getActiveRaffle,
+  getPastRaffles,
+} from "@/data/raffles";
 import { CountdownTimer } from "@/components/ui/CountdownTimer";
 import { RaffleStatusBadge } from "@/components/ui/RaffleStatusBadge";
 
@@ -47,12 +51,7 @@ export default function RafflesPage() {
                   <div className="flex items-center gap-3">
                     <RaffleStatusBadge status="active" />
                     <span className="text-sm text-gray-500">
-                      Drawing{" "}
-                      {new Date(activeRaffle.drawDate).toLocaleDateString("en-US", {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
+                      Drawing {formatRaffleDate(activeRaffle.drawDate)}
                     </span>
                   </div>
                   <h2 className="mt-4 text-2xl font-bold text-gray-900 group-hover:text-gold-dark transition-colors sm:text-3xl">
@@ -76,7 +75,12 @@ export default function RafflesPage() {
                 </div>
 
                 <div className="flex flex-col items-center gap-6">
-                  <CountdownTimer targetDate={activeRaffle.drawDate} />
+                  <div className="flex flex-col items-center gap-2">
+                    <CountdownTimer targetDate={activeRaffle.endDate} />
+                    <span className="text-xs text-gray-500">
+                      Entries close {formatRaffleDate(activeRaffle.endDate)}
+                    </span>
+                  </div>
                   <span className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-gold/30 group-hover:bg-gold-dark transition-all">
                     Get Tickets
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
@@ -126,11 +130,7 @@ export default function RafflesPage() {
                   <div className="flex items-center justify-between">
                     <RaffleStatusBadge status="completed" />
                     <span className="text-sm text-gray-500">
-                      {new Date(raffle.drawDate).toLocaleDateString("en-US", {
-                        month: "long",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
+                      {formatRaffleDate(raffle.drawDate)}
                     </span>
                   </div>
                   <h3 className="mt-4 text-lg font-semibold text-gray-900 group-hover:text-gold-dark transition-colors">
