@@ -31,8 +31,9 @@ export default function RafflesPage() {
               Raffles
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Enter for a chance to win while supporting our programs that feed,
-              educate, and uplift communities in St. James, Jamaica.
+              {activeRaffle
+                ? "Enter for a chance to win while supporting our programs that feed, educate, and uplift communities in St. James, Jamaica."
+                : "Explore past raffle results and see how your support helps children and families in St. James, Jamaica."}
             </p>
           </div>
         </div>
@@ -92,7 +93,7 @@ export default function RafflesPage() {
             </Link>
           </div>
         </section>
-      ) : (
+      ) : pastRaffles.length === 0 ? (
         <section className="pb-16 sm:pb-24">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-lg rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-gray-900/5">
@@ -111,7 +112,7 @@ export default function RafflesPage() {
             </div>
           </div>
         </section>
-      )}
+      ) : null}
 
       {/* Past Raffles */}
       {pastRaffles.length > 0 && (
@@ -139,6 +140,11 @@ export default function RafflesPage() {
                   {raffle.winner && (
                     <p className="mt-2 text-sm text-gray-600">
                       Winner: <span className="font-medium">{raffle.winner}</span>
+                    </p>
+                  )}
+                  {raffle.resultSummary && (
+                    <p className="mt-2 text-sm text-gray-600">
+                      {raffle.resultSummary}
                     </p>
                   )}
                   {raffle.amountRaised && (

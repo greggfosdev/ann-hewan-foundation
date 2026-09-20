@@ -2,14 +2,44 @@ import Link from "next/link";
 import {
   formatRaffleDateTime,
   getActiveRaffle,
-  hasActiveRaffle,
+  getPastRaffles,
 } from "@/data/raffles";
 import { CountdownTimer } from "@/components/ui/CountdownTimer";
 
 export function RafflePromo() {
-  if (!hasActiveRaffle()) return null;
+  const activeRaffle = getActiveRaffle();
 
-  const raffle = getActiveRaffle()!;
+  if (!activeRaffle) {
+    const latestRaffle = getPastRaffles()[0];
+    if (!latestRaffle) return null;
+
+    return (
+      <section className="bg-gradient-to-br from-gold/5 to-coral/5 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold">
+              Raffle Update
+            </p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              {latestRaffle.title}
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">
+              {latestRaffle.resultSummary ?? "This raffle has concluded. Thank you to everyone who supported it."}
+            </p>
+            <Link
+              href={`/raffles/${latestRaffle.slug}`}
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-white shadow-lg shadow-gold/30 transition-all hover:bg-gold-dark hover:shadow-gold/40"
+            >
+              View Raffle Recap
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const raffle = activeRaffle;
   const topPrize = raffle.prizes[0];
 
   return (

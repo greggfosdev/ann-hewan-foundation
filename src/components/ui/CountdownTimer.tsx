@@ -34,14 +34,18 @@ export function CountdownTimer({
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
-    setTimeLeft(calculateTimeLeft(targetDate));
-    const timer = setInterval(() => {
+    const update = () => {
+      setMounted(true);
       const tl = calculateTimeLeft(targetDate);
       setTimeLeft(tl);
       if (!tl) clearInterval(timer);
-    }, 1000);
-    return () => clearInterval(timer);
+    };
+    const initialUpdate = setTimeout(update, 0);
+    const timer = setInterval(update, 1000);
+    return () => {
+      clearTimeout(initialUpdate);
+      clearInterval(timer);
+    };
   }, [targetDate]);
 
   if (!mounted) {

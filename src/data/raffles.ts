@@ -14,6 +14,20 @@ export interface RaffleTicketTier {
   popular?: boolean;
 }
 
+export interface RaffleRecapVideo {
+  src: string;
+  title: string;
+  description: string;
+  captionsSrc: string;
+  poster?: string;
+}
+
+export interface RaffleRecapImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
 export interface Raffle {
   slug: string;
   title: string;
@@ -36,6 +50,9 @@ export interface Raffle {
   winner?: string;
   amountRaised?: string;
   totalTicketsSold?: number;
+  resultSummary?: string;
+  recapImage?: RaffleRecapImage;
+  recapVideos?: RaffleRecapVideo[];
 }
 
 const raffles: Raffle[] = [
@@ -43,10 +60,10 @@ const raffles: Raffle[] = [
     slug: "petes-10th-annual-back-to-school-raffle",
     title: "Pete's 10th Annual Back to School Raffle",
     subtitle:
-      "Win a $500 Visa Gift Card while supporting children heading back to school",
+      "The August 2026 drawing supported children heading back to school",
     description:
-      "Join our raffle for a chance to win a $500.00 Visa Gift Card while supporting our mission. Each ticket purchase directly contributes to The Ann Hewan Foundation's community impact efforts — providing school supplies and resources for children in Goodwill and surrounding communities in St. James, Jamaica.",
-    status: "active",
+      "This raffle supported The Ann Hewan Foundation's Back 2 School initiative, which provides school supplies and resources for children in Goodwill and surrounding communities in St. James, Jamaica.",
+    status: "completed",
     endDate: "2026-08-06T23:59:00-04:00",
     drawDate: "2026-08-07T12:00:00-04:00",
     startDate: "2026-06-01T00:00:00Z",
@@ -74,6 +91,13 @@ const raffles: Raffle[] = [
       "All proceeds benefit The Ann Hewan Foundation programs.",
     ],
     beneficiary: "Back to School Program",
+    resultSummary:
+      "The drawing is complete, and the $500 Visa gift card has been delivered to the winner.",
+    recapImage: {
+      src: "/images/raffles/august-2026-community-banner.webp",
+      alt: "Goodwill School Alumni Foundation banner with The Ann Hewan Foundation listed as a sponsor",
+      caption: "The Goodwill School Alumni Foundation banner at the August 2026 community gathering.",
+    },
   },
 ];
 
@@ -82,15 +106,13 @@ export function getActiveRaffle(): Raffle | undefined {
 }
 
 export function getPastRaffles(): Raffle[] {
-  return raffles.filter((r) => r.status === "completed");
+  return raffles
+    .filter((r) => r.status === "completed")
+    .sort((a, b) => b.drawDate.localeCompare(a.drawDate));
 }
 
 export function getRaffleBySlug(slug: string): Raffle | undefined {
   return raffles.find((r) => r.slug === slug);
-}
-
-export function hasActiveRaffle(): boolean {
-  return raffles.some((r) => r.status === "active");
 }
 
 export function getAllRaffles(): Raffle[] {

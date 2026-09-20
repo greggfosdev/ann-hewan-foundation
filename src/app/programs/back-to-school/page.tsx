@@ -167,6 +167,31 @@ export default function BackToSchoolPage() {
         </div>
       </section>
 
+      {/* Latest raffle update */}
+      <section className="bg-cream py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-gray-900/5 sm:p-10">
+            <p className="text-sm font-semibold uppercase tracking-wider text-gold">
+              August 2026 update
+            </p>
+            <h2 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl">
+              Back-to-school raffle completed
+            </h2>
+            <p className="mt-4 text-gray-600">
+              Pete&apos;s 10th Annual Back to School Raffle has concluded, and the
+              $500 Visa gift card was delivered to the winner. Thank you to
+              everyone who supported the initiative.
+            </p>
+            <Link
+              href="/raffles/petes-10th-annual-back-to-school-raffle"
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-dark hover:text-gold"
+            >
+              View the raffle recap <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Photo Gallery - Moved up for better UX */}
       <section id="gallery" className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
