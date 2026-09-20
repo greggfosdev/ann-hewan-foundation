@@ -4,11 +4,9 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import {
   formatRaffleDate,
-  formatRaffleDateTime,
   getAllRaffles,
   getRaffleBySlug,
 } from "@/data/raffles";
-import { CountdownTimer } from "@/components/ui/CountdownTimer";
 import { RaffleStatusBadge } from "@/components/ui/RaffleStatusBadge";
 
 interface PageProps {
@@ -34,9 +32,7 @@ export default async function RaffleDetailPage({ params }: PageProps) {
   const raffle = getRaffleBySlug(slug);
   if (!raffle) notFound();
 
-  const isActive = raffle.status === "active";
   const isCompleted = raffle.status === "completed";
-  const iframeHeight = raffle.iframeHeight ?? 1400;
 
   return (
     <div className="bg-cream min-h-screen">
@@ -67,15 +63,6 @@ export default async function RaffleDetailPage({ params }: PageProps) {
               {raffle.title}
             </h1>
             <p className="mt-4 text-lg text-gray-600">{raffle.subtitle}</p>
-            {isActive && (
-              <div className="mt-8 flex flex-col items-center gap-3">
-                <CountdownTimer targetDate={raffle.endDate} />
-                <p className="text-sm text-gray-500">
-                  Entries close {formatRaffleDateTime(raffle.endDate)} · Drawing{" "}
-                  {formatRaffleDateTime(raffle.drawDate)}
-                </p>
-              </div>
-            )}
           </div>
         </div>
       </section>
@@ -116,80 +103,6 @@ export default async function RaffleDetailPage({ params }: PageProps) {
           </div>
         </div>
       </section>
-
-      {/* Ticket Tiers */}
-      {isActive && (
-        <section className="border-y border-gray-200 bg-white">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-4 py-6 sm:grid-cols-3">
-              {raffle.ticketTiers.map((tier) => (
-                <div
-                  key={tier.name}
-                  className={`relative rounded-xl p-5 text-center ${
-                    tier.popular
-                      ? "bg-gold/5 ring-2 ring-gold"
-                      : "bg-cream"
-                  }`}
-                >
-                  {tier.popular && (
-                    <span className="absolute -top-2.5 left-1/2 -translate-x-1/2 rounded-full bg-gold px-3 py-0.5 text-xs font-semibold text-white">
-                      Most Popular
-                    </span>
-                  )}
-                  <p className="text-2xl font-bold text-gold-dark">${tier.price}</p>
-                  <p className="mt-1 text-sm font-medium text-gray-900">{tier.name}</p>
-                  <p className="mt-0.5 text-xs text-gray-500">
-                    {tier.quantity} {tier.quantity === 1 ? "entry" : "entries"}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Zeffy Embed (active) or Winner Section (completed) */}
-      {isActive && (
-        <section className="py-12 sm:py-16">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <h2 className="mb-6 text-center text-2xl font-bold text-gray-900">
-              Get Your Tickets
-            </h2>
-            <div className="rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5 overflow-hidden">
-              <iframe
-                title={`Purchase tickets for ${raffle.title}`}
-                src={raffle.zeffyEmbedUrl}
-                className="w-full border-0"
-                style={{ minHeight: `${iframeHeight}px` }}
-                allow="payment"
-              />
-            </div>
-            {/* Trust badges */}
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
-              <span className="flex items-center gap-1.5">
-                <svg className="h-4 w-4 text-trust-green" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Secure payment via Zeffy — 100% free, zero fees
-              </span>
-              <span className="flex items-center gap-1.5">
-                <svg className="h-4 w-4 text-trust-green" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                All proceeds support foundation programs
-              </span>
-            </div>
-          </div>
-        </section>
-      )}
 
       {isCompleted && (
         <section className="py-12 sm:py-16">
@@ -322,35 +235,6 @@ export default async function RaffleDetailPage({ params }: PageProps) {
           </div>
         </div>
       </section>
-
-      {/* Share This Raffle */}
-      {isActive && (
-        <section className="py-12 sm:py-16">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-sm text-center">
-              <h2 className="text-xl font-bold text-gray-900">
-                Share This Raffle
-              </h2>
-              <p className="mt-2 text-sm text-gray-600">
-                Know someone who&apos;d want to enter? Share the QR code below
-                — screenshot it, print it, or send it to a friend.
-              </p>
-              <div className="mt-6 inline-block rounded-2xl bg-white p-4 shadow-sm ring-1 ring-gray-900/5">
-                <Image
-                  src="/images/raffles/petes-raffle-qr-code.png"
-                  alt="QR code to purchase raffle tickets"
-                  width={200}
-                  height={200}
-                  className="mx-auto"
-                />
-              </div>
-              <p className="mt-3 text-xs text-gray-400">
-                Scan to purchase tickets on your phone
-              </p>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Beneficiary CTA */}
       <section className="py-12 sm:py-16">

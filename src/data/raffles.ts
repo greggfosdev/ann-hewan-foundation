@@ -7,13 +7,6 @@ export interface RafflePrize {
   image?: string;
 }
 
-export interface RaffleTicketTier {
-  name: string;
-  price: number;
-  quantity: number;
-  popular?: boolean;
-}
-
 export interface RaffleRecapVideo {
   src: string;
   title: string;
@@ -39,14 +32,10 @@ export interface Raffle {
   /** When the winner is drawn, ISO 8601 with offset */
   drawDate: string;
   startDate: string;
-  zeffyUrl: string;
-  zeffyEmbedUrl: string;
   prizes: RafflePrize[];
-  ticketTiers: RaffleTicketTier[];
   rules: string[];
   beneficiary: string;
   heroImage?: string;
-  iframeHeight?: number;
   winner?: string;
   amountRaised?: string;
   totalTicketsSold?: number;
@@ -67,10 +56,6 @@ const raffles: Raffle[] = [
     endDate: "2026-08-06T23:59:00-04:00",
     drawDate: "2026-08-07T12:00:00-04:00",
     startDate: "2026-06-01T00:00:00Z",
-    zeffyUrl:
-      "https://www.zeffy.com/ticketing/petes-10th-annual-back-to-school-raffle",
-    zeffyEmbedUrl:
-      "https://www.zeffy.com/embed/ticketing/petes-10th-annual-back-to-school-raffle",
     prizes: [
       {
         name: "$500 Visa Gift Card",
@@ -78,10 +63,6 @@ const raffles: Raffle[] = [
           "A $500.00 Visa Gift Card — use it anywhere Visa is accepted.",
         value: "$500",
       },
-    ],
-    ticketTiers: [
-      { name: "1 Ticket", price: 10, quantity: 1 },
-      { name: "3 Tickets", price: 25, quantity: 3, popular: true },
     ],
     rules: [
       "Must be 18 years or older to purchase tickets.",
@@ -150,13 +131,4 @@ export function formatRaffleDate(iso: string): string {
     day: "numeric",
     year: "numeric",
   });
-}
-
-export function formatRaffleDateTime(iso: string): string {
-  const time = new Date(iso).toLocaleTimeString("en-US", {
-    timeZone: RAFFLE_TIME_ZONE,
-    hour: "numeric",
-    minute: "2-digit",
-  });
-  return `${formatRaffleDate(iso)} at ${time} ET`;
 }

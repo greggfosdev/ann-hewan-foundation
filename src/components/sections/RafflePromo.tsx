@@ -1,10 +1,9 @@
 import Link from "next/link";
 import {
-  formatRaffleDateTime,
+  formatRaffleDate,
   getActiveRaffle,
   getPastRaffles,
 } from "@/data/raffles";
-import { CountdownTimer } from "@/components/ui/CountdownTimer";
 
 export function RafflePromo() {
   const activeRaffle = getActiveRaffle();
@@ -59,20 +58,16 @@ export function RafflePromo() {
             </p>
           )}
 
-          <div className="mt-8 flex flex-col items-center gap-3">
-            <CountdownTimer targetDate={raffle.endDate} />
-            <p className="text-sm text-gray-500">
-              Entries close {formatRaffleDateTime(raffle.endDate)} · Drawing{" "}
-              {formatRaffleDateTime(raffle.drawDate)}
-            </p>
-          </div>
+          <p className="mt-8 text-sm text-gray-500">
+            Drawing {formatRaffleDate(raffle.drawDate)}
+          </p>
 
           <div className="mt-8">
             <Link
               href={`/raffles/${raffle.slug}`}
               className="inline-flex items-center gap-2 rounded-full bg-gold px-8 py-4 text-base font-semibold text-white shadow-lg shadow-gold/30 hover:bg-gold-dark hover:shadow-gold/40 transition-all"
             >
-              Get Raffle Tickets
+              View Raffle Details
               <svg
                 className="h-5 w-5"
                 fill="none"

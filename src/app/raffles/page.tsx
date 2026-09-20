@@ -5,7 +5,6 @@ import {
   getActiveRaffle,
   getPastRaffles,
 } from "@/data/raffles";
-import { CountdownTimer } from "@/components/ui/CountdownTimer";
 import { RaffleStatusBadge } from "@/components/ui/RaffleStatusBadge";
 
 export const metadata: Metadata = {
@@ -32,7 +31,7 @@ export default function RafflesPage() {
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               {activeRaffle
-                ? "Enter for a chance to win while supporting our programs that feed, educate, and uplift communities in St. James, Jamaica."
+                ? "Explore current raffle details and past results supporting children and families in St. James, Jamaica."
                 : "Explore past raffle results and see how your support helps children and families in St. James, Jamaica."}
             </p>
           </div>
@@ -70,20 +69,11 @@ export default function RafflesPage() {
                     </div>
                   )}
 
-                  <p className="mt-4 text-sm text-gray-500">
-                    Tickets from ${Math.min(...activeRaffle.ticketTiers.map((t) => t.price))}
-                  </p>
                 </div>
 
                 <div className="flex flex-col items-center gap-6">
-                  <div className="flex flex-col items-center gap-2">
-                    <CountdownTimer targetDate={activeRaffle.endDate} />
-                    <span className="text-xs text-gray-500">
-                      Entries close {formatRaffleDate(activeRaffle.endDate)}
-                    </span>
-                  </div>
                   <span className="inline-flex items-center gap-2 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-gold/30 group-hover:bg-gold-dark transition-all">
-                    Get Tickets
+                    View Details
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                     </svg>
