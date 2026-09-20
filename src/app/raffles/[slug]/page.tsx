@@ -228,22 +228,34 @@ export default async function RaffleDetailPage({ params }: PageProps) {
         </section>
       )}
 
-      {isCompleted && raffle.recapImage && (
-        <section className="pb-12 sm:pb-16">
+      {isCompleted && raffle.recapImages && raffle.recapImages.length > 0 && (
+        <section id="gathering-gallery" className="pb-12 sm:pb-16">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <figure className="mx-auto max-w-lg text-center">
-              <Image
-                src={raffle.recapImage.src}
-                alt={raffle.recapImage.alt}
-                width={750}
-                height={1000}
-                sizes="(max-width: 640px) 100vw, 512px"
-                className="mx-auto max-h-[34rem] w-auto max-w-full rounded-xl object-contain shadow-sm"
-              />
-              <figcaption className="mt-3 text-sm text-gray-500">
-                {raffle.recapImage.caption}
-              </figcaption>
-            </figure>
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-2xl font-bold text-gray-900">
+                Moments from the August 2026 Gathering
+              </h2>
+              <p className="mt-3 text-gray-600">
+                A look at the community event connected with the fundraiser.
+              </p>
+            </div>
+            <div className="mx-auto mt-8 grid max-w-5xl gap-6 sm:grid-cols-2">
+              {raffle.recapImages.map((photo) => (
+                <figure key={photo.src} className="text-center">
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={750}
+                    height={1000}
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="h-auto w-full rounded-xl shadow-sm"
+                  />
+                  <figcaption className="mt-3 text-sm text-gray-500">
+                    {photo.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
       )}

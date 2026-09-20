@@ -51,7 +51,7 @@ export interface Raffle {
   amountRaised?: string;
   totalTicketsSold?: number;
   resultSummary?: string;
-  recapImage?: RaffleRecapImage;
+  recapImages?: RaffleRecapImage[];
   recapVideos?: RaffleRecapVideo[];
 }
 
@@ -93,11 +93,28 @@ const raffles: Raffle[] = [
     beneficiary: "Back to School Program",
     resultSummary:
       "The drawing is complete, and the $500 Visa gift card has been delivered to the winner.",
-    recapImage: {
-      src: "/images/raffles/august-2026-community-banner.webp",
-      alt: "Goodwill School Alumni Foundation banner with The Ann Hewan Foundation listed as a sponsor",
-      caption: "The Goodwill School Alumni Foundation banner at the August 2026 community gathering.",
-    },
+    recapImages: [
+      {
+        src: "/images/raffles/august-2026-venue.webp",
+        alt: "Church and surrounding grounds at the August 2026 community gathering",
+        caption: "The community gathering venue.",
+      },
+      {
+        src: "/images/raffles/august-2026-community-banner.webp",
+        alt: "Goodwill School Alumni Foundation banner with The Ann Hewan Foundation listed as a sponsor",
+        caption: "The Goodwill School Alumni Foundation banner, recognizing The Ann Hewan Foundation as a sponsor.",
+      },
+      {
+        src: "/images/raffles/august-2026-families.webp",
+        alt: "Families and children seated beneath a tent at the community gathering",
+        caption: "Families and children at the gathering.",
+      },
+      {
+        src: "/images/raffles/august-2026-volunteers.webp",
+        alt: "Foundation representatives and attendees talking beneath the event tent",
+        caption: "Foundation representatives and attendees at the event.",
+      },
+    ],
   },
 ];
 
