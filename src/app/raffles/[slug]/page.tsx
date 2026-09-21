@@ -70,7 +70,9 @@ export default async function RaffleDetailPage({ params }: PageProps) {
       {/* Prize Showcase */}
       <section className="pb-12 sm:pb-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-center text-2xl font-bold text-gray-900">Prizes</h2>
+          <h2 className="text-center text-2xl font-bold text-gray-900">
+            {isCompleted ? "Advertised Prize" : "Prizes"}
+          </h2>
           <div className={`mt-8 grid gap-6 ${raffle.prizes.length === 1 ? "mx-auto max-w-sm" : "sm:grid-cols-2 lg:grid-cols-3"}`}>
             {raffle.prizes.map((prize, i) => (
               <div
@@ -141,6 +143,43 @@ export default async function RaffleDetailPage({ params }: PageProps) {
         </section>
       )}
 
+      {isCompleted && raffle.recapVideos && raffle.recapVideos.length > 0 && (
+        <section className="border-t border-gray-200 bg-white py-12 sm:py-16">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <h2 className="text-2xl font-bold text-gray-900">
+                Prize Handoff
+              </h2>
+              <p className="mt-3 text-gray-600">
+                Watch the foundation founder present the winner&apos;s $500 prize.
+              </p>
+            </div>
+            <div className="mt-8 grid gap-8 md:grid-cols-2">
+              {raffle.recapVideos.map((video) => (
+                <figure key={video.src} className="rounded-2xl bg-cream p-4 sm:p-6">
+                  <video
+                    controls
+                    playsInline
+                    preload="metadata"
+                    poster={video.poster}
+                    className="mx-auto aspect-[9/16] max-h-[32rem] w-full rounded-xl bg-black object-contain"
+                    aria-label={video.title}
+                  >
+                    <source src={video.src} type="video/mp4" />
+                    <track kind="captions" src={video.captionsSrc} srcLang="en" label="English" default />
+                    Your browser does not support the video tag.
+                  </video>
+                  <figcaption className="mt-4">
+                    <h3 className="font-semibold text-gray-900">{video.title}</h3>
+                    <p className="mt-1 text-sm text-gray-600">{video.description}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {isCompleted && raffle.recapImages && raffle.recapImages.length > 0 && (
         <section id="gathering-gallery" className="pb-12 sm:pb-16">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -165,43 +204,6 @@ export default async function RaffleDetailPage({ params }: PageProps) {
                   />
                   <figcaption className="mt-3 text-sm text-gray-500">
                     {photo.caption}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {isCompleted && raffle.recapVideos && raffle.recapVideos.length > 0 && (
-        <section className="border-t border-gray-200 bg-white py-12 sm:py-16">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-2xl font-bold text-gray-900">
-                Drawing &amp; Prize Handoff
-              </h2>
-              <p className="mt-3 text-gray-600">
-                Moments from the raffle and delivery of the prize.
-              </p>
-            </div>
-            <div className="mt-8 grid gap-8 md:grid-cols-2">
-              {raffle.recapVideos.map((video) => (
-                <figure key={video.src} className="rounded-2xl bg-cream p-4 sm:p-6">
-                  <video
-                    controls
-                    playsInline
-                    preload="metadata"
-                    poster={video.poster}
-                    className="mx-auto aspect-[9/16] max-h-[32rem] w-full rounded-xl bg-black object-contain"
-                    aria-label={video.title}
-                  >
-                    <source src={video.src} type="video/mp4" />
-                    <track kind="captions" src={video.captionsSrc} srcLang="en" label="English" default />
-                    Your browser does not support the video tag.
-                  </video>
-                  <figcaption className="mt-4">
-                    <h3 className="font-semibold text-gray-900">{video.title}</h3>
-                    <p className="mt-1 text-sm text-gray-600">{video.description}</p>
                   </figcaption>
                 </figure>
               ))}

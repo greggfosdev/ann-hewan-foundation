@@ -73,7 +73,7 @@ const raffles: Raffle[] = [
     ],
     beneficiary: "Back to School Program",
     resultSummary:
-      "The drawing is complete, and the $500 Visa gift card has been delivered to the winner.",
+      "The drawing is complete. The raffle advertised a $500 Visa gift card; the winner received a $500 cashier's check at the prize handoff.",
     recapImages: [
       {
         src: "/images/raffles/august-2026-venue.webp",
@@ -94,6 +94,16 @@ const raffles: Raffle[] = [
         src: "/images/raffles/august-2026-volunteers.webp",
         alt: "Foundation representatives and attendees talking beneath the event tent",
         caption: "Foundation representatives and attendees at the event.",
+      },
+    ],
+    recapVideos: [
+      {
+        src: "/videos/raffles/august-2026-prize-handoff.mp4",
+        title: "The $500 prize handoff",
+        description:
+          "The foundation founder presents the $500 cashier's check to the raffle winner.",
+        captionsSrc: "/videos/raffles/august-2026-prize-handoff.vtt",
+        poster: "/images/raffles/august-2026-prize-handoff-poster.webp",
       },
     ],
   },
