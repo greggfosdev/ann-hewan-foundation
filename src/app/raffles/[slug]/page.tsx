@@ -154,7 +154,9 @@ export default async function RaffleDetailPage({ params }: PageProps) {
                 Watch the foundation founder present the winner&apos;s $500 prize.
               </p>
             </div>
-            <div className="mt-8 grid gap-8 md:grid-cols-2">
+            <div className={raffle.recapVideos.length === 1
+              ? "mx-auto mt-8 max-w-sm"
+              : "mx-auto mt-8 grid max-w-5xl gap-8 md:grid-cols-2"}>
               {raffle.recapVideos.map((video) => (
                 <figure key={video.src} className="rounded-2xl bg-cream p-4 sm:p-6">
                   <video
@@ -162,7 +164,7 @@ export default async function RaffleDetailPage({ params }: PageProps) {
                     playsInline
                     preload="metadata"
                     poster={video.poster}
-                    className="mx-auto aspect-[9/16] max-h-[32rem] w-full rounded-xl bg-black object-contain"
+                    className="mx-auto aspect-[9/16] max-h-[32rem] w-full max-w-[18rem] rounded-xl bg-black object-contain"
                     aria-label={video.title}
                   >
                     <source src={video.src} type="video/mp4" />
