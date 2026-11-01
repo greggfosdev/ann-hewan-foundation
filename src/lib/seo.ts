@@ -120,9 +120,9 @@ export function pageUrl(path: string): string {
 export function createPageMetadata(page: SitePage): Metadata {
   const title = `${page.title} | ${SITE_NAME}`;
   const image = {
-    url: page.image ?? "/images/hero/children-hero.webp",
-    width: page.imageWidth ?? 682,
-    height: page.imageHeight ?? 340,
+    url: page.image ?? "/images/hero/children-hero-enhanced.webp",
+    width: page.imageWidth ?? 1774,
+    height: page.imageHeight ?? 887,
     alt: page.imageAlt ?? "Children from the Goodwill community in Jamaica",
   };
   return {

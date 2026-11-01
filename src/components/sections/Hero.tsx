@@ -101,7 +101,7 @@ export function Hero({
         <div className="relative mx-auto max-w-5xl pb-8">
           <div className="relative aspect-[2/1] overflow-hidden rounded-2xl shadow-2xl ring-1 ring-gray-900/5">
             <Image
-              src="/images/hero/children-hero.webp"
+              src="/images/hero/children-hero-enhanced.webp"
               alt="Smiling children in school uniforms from the Goodwill community in Jamaica"
               fill
               className="object-cover"
