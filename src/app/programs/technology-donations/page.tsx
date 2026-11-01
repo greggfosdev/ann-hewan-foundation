@@ -55,9 +55,6 @@ export default function TechnologyDonationsPage() {
                   className="h-auto w-full"
                 />
               </a>
-              <figcaption className="mt-3 text-sm leading-6 text-gray-600">
-                {leadPhoto.caption}
-              </figcaption>
             </figure>
           </div>
         </div>
@@ -93,9 +90,6 @@ export default function TechnologyDonationsPage() {
                     className="h-auto w-full"
                   />
                 </a>
-                <figcaption className="mt-3 text-sm leading-6 text-gray-600">
-                  {photo.caption}
-                </figcaption>
               </figure>
             ))}
           </div>
