@@ -1,12 +1,9 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Hurricane Relief",
-  description:
-    "Emergency support for families affected by Hurricane Melissa, including food, shelter supplies, and rebuilding assistance.",
-};
+export const metadata = getPageMetadata("/programs/hurricane-relief");
 
 const stats = [
   { value: "100+", label: "Families Assisted" },
@@ -41,6 +38,7 @@ const features = [
 export default function HurricaneReliefPage() {
   return (
     <>
+      <PageJsonLd path="/programs/hurricane-relief" />
       {/* Hero */}
       <section className="bg-gradient-to-br from-trust-green/10 to-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -207,7 +205,7 @@ export default function HurricaneReliefPage() {
             <figure className="overflow-hidden rounded-xl bg-black shadow-sm ring-1 ring-gray-900/5">
               <video
                 controls
-                preload="metadata"
+                preload="none"
                 playsInline
                 poster="/images/hurricane-relief/video-01-poster.jpg"
                 className="h-full w-full"

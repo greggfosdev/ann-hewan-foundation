@@ -1,3 +1,5 @@
+import { createPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -21,10 +23,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const raffle = getRaffleBySlug(slug);
   if (!raffle) return {};
-  return {
-    title: `${raffle.title} | Raffles | The Ann Hewan Foundation`,
+  return createPageMetadata({
+    path: `/raffles/${raffle.slug}`,
+    title: raffle.title,
     description: raffle.subtitle,
-  };
+  });
 }
 
 export default async function RaffleDetailPage({ params }: PageProps) {
@@ -36,6 +39,7 @@ export default async function RaffleDetailPage({ params }: PageProps) {
 
   return (
     <div className="bg-cream min-h-screen">
+      <PageJsonLd path={`/raffles/${raffle.slug}`} title={raffle.title} description={raffle.subtitle} />
       {/* Breadcrumb */}
       <div className="mx-auto max-w-7xl px-6 pt-8 lg:px-8">
         <nav className="flex items-center gap-2 text-sm text-gray-500">
@@ -162,7 +166,7 @@ export default async function RaffleDetailPage({ params }: PageProps) {
                   <video
                     controls
                     playsInline
-                    preload="metadata"
+                    preload="none"
                     poster={video.poster}
                     className="mx-auto aspect-[9/16] max-h-[32rem] w-full max-w-[18rem] rounded-xl bg-black object-contain"
                     aria-label={video.title}

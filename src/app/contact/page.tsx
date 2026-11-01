@@ -1,14 +1,13 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Contact",
-  description: "Get in touch with the Ann Hewan Foundation.",
-};
+export const metadata = getPageMetadata("/contact");
 
 export default function ContactPage() {
   return (
     <>
+      <PageJsonLd path="/contact" />
       {/* Hero */}
       <section className="bg-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -1,5 +1,6 @@
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
-import { Metadata } from "next";
 import {
   formatRaffleDate,
   getActiveRaffle,
@@ -7,11 +8,7 @@ import {
 } from "@/data/raffles";
 import { RaffleStatusBadge } from "@/components/ui/RaffleStatusBadge";
 
-export const metadata: Metadata = {
-  title: "Raffles | The Ann Hewan Foundation",
-  description:
-    "Enter our fundraiser raffles to win prizes while supporting children and families in Goodwill and surrounding communities.",
-};
+export const metadata = getPageMetadata("/raffles");
 
 export default function RafflesPage() {
   const activeRaffle = getActiveRaffle();
@@ -19,6 +16,7 @@ export default function RafflesPage() {
 
   return (
     <div className="bg-cream min-h-screen">
+      <PageJsonLd path="/raffles" />
       {/* Hero */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

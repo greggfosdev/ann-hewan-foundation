@@ -1,12 +1,7 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-
 interface Stat {
   value: number;
   suffix?: string;
   label: string;
-  emotionalLabel: string;
 }
 
 const stats: Stat[] = [
@@ -14,76 +9,22 @@ const stats: Stat[] = [
     value: 150,
     suffix: "+",
     label: "Children Fed Daily",
-    emotionalLabel: "Children who won't go hungry today",
   },
   {
     value: 300,
     suffix: "+",
     label: "Students Supported",
-    emotionalLabel: "Dreams we're helping achieve",
   },
   {
     value: 15,
     label: "Years of Service",
-    emotionalLabel: "Years of love and commitment",
   },
   {
     value: 100,
     suffix: "%",
     label: "To Programs",
-    emotionalLabel: "Of donations fund programs",
   },
 ];
-
-function AnimatedCounter({
-  value,
-  suffix = "",
-}: {
-  value: number;
-  suffix?: string;
-}) {
-  const [count, setCount] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
-          const duration = 2000;
-          const steps = 60;
-          const increment = value / steps;
-          let current = 0;
-
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= value) {
-              setCount(value);
-              clearInterval(timer);
-            } else {
-              setCount(Math.floor(current));
-            }
-          }, duration / steps);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [value, hasAnimated]);
-
-  return (
-    <span ref={ref}>
-      {count}
-      {suffix}
-    </span>
-  );
-}
 
 export function ImpactStats() {
   return (
@@ -112,12 +53,12 @@ export function ImpactStats() {
                 <div className="h-3 w-12 rounded-full bg-gradient-to-r from-gold to-coral" />
               </div>
 
-              <dd className="mt-4 text-4xl font-bold tracking-tight text-gold sm:text-5xl">
-                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              </dd>
-              <dt className="mt-3 text-sm font-medium text-gray-900">
-                {stat.emotionalLabel}
+              <dt className="order-2 mt-3 text-sm font-medium text-gray-900">
+                {stat.label}
               </dt>
+              <dd className="order-1 mt-4 text-4xl font-bold tracking-tight text-gold sm:text-5xl">
+                {stat.value}{stat.suffix}
+              </dd>
             </div>
           ))}
         </dl>

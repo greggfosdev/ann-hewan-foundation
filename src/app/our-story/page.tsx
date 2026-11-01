@@ -1,17 +1,15 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import { Timeline } from "@/components/sections/Timeline";
 
-export const metadata: Metadata = {
-  title: "Our Story",
-  description:
-    "Learn about Ann Hewan, Goodwill and the surrounding communities, and the foundation's mission to uplift families in Jamaica.",
-};
+export const metadata = getPageMetadata("/our-story");
 
 export default function OurStoryPage() {
   return (
     <>
+      <PageJsonLd path="/our-story" />
       {/* Hero */}
       <section className="bg-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

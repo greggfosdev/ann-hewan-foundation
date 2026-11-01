@@ -1,14 +1,12 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description:
-    "Privacy Policy for The Ann Hewan Foundation. Learn how we collect, use, and protect your personal information.",
-};
+export const metadata = getPageMetadata("/privacy");
 
 export default function PrivacyPage() {
   return (
     <div className="bg-white py-24 sm:py-32">
+      <PageJsonLd path="/privacy" />
       <div className="mx-auto max-w-3xl px-6 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900">
           Privacy Policy

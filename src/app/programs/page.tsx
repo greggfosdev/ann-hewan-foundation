@@ -1,10 +1,8 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Programs",
-  description: "Explore the programs offered by the Ann Hewan Foundation.",
-};
+export const metadata = getPageMetadata("/programs");
 
 const programs = [
   {
@@ -84,6 +82,7 @@ const colorClasses = {
 export default function ProgramsPage() {
   return (
     <>
+      <PageJsonLd path="/programs" />
       {/* Hero */}
       <section className="bg-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

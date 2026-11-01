@@ -1,4 +1,5 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import { getUpcomingEvent } from "@/data/events";
@@ -7,11 +8,7 @@ import { backToSchool2026 } from "@/data/back-to-school";
 // Revalidate daily so the upcoming-event callout expires without a redeploy.
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: "Back 2 School Initiative",
-  description:
-    "Providing school supplies, assisting with uniforms for students transitioning to high school, and helping with textbooks and educational resources, supporting over 300 students annually.",
-};
+export const metadata = getPageMetadata("/programs/back-to-school");
 
 const stats = [
   { value: "300+", label: "Students Supported" },
@@ -53,6 +50,7 @@ export default function BackToSchoolPage() {
 
   return (
     <>
+      <PageJsonLd path="/programs/back-to-school" />
       {/* Hero */}
       <section className="bg-gradient-to-br from-ocean/10 to-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -314,7 +312,7 @@ export default function BackToSchoolPage() {
               >
                 <video
                   controls
-                  preload="metadata"
+                  preload="none"
                   playsInline
                   poster={video.poster}
                   className="h-full w-full"

@@ -1,13 +1,16 @@
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { ImpactStats } from "@/components/sections/ImpactStats";
 import { ProgramCards } from "@/components/sections/ProgramCards";
 
-
 import { DonorWall } from "@/components/sections/DonorWall";
 import { RafflePromo } from "@/components/sections/RafflePromo";
 import { EventPromo } from "@/components/sections/EventPromo";
+
+export const metadata = getPageMetadata("/");
 
 // Revalidate daily so time-boxed sections (events, raffles) appear and
 // expire without needing a redeploy.
@@ -16,6 +19,7 @@ export const revalidate = 86400;
 export default function Home() {
   return (
     <>
+      <PageJsonLd path="/" />
       {/* Hero Section with Donation CTA */}
       <Hero />
 
@@ -46,6 +50,7 @@ export default function Home() {
             <div className="w-full max-w-xs">
               <div className="relative aspect-[9/16] overflow-hidden rounded-2xl bg-gray-900 shadow-xl ring-1 ring-gray-900/10">
                 <iframe
+                  loading="lazy"
                   src="https://player.vimeo.com/video/986786825?h=011b2107fc"
                   className="absolute inset-0 h-full w-full"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
@@ -65,6 +70,7 @@ export default function Home() {
             <div className="w-full max-w-xl">
               <div className="relative aspect-video overflow-hidden rounded-2xl bg-gray-900 shadow-xl ring-1 ring-gray-900/10">
                 <iframe
+                  loading="lazy"
                   src="https://player.vimeo.com/video/999982778?h=7b584e31e9"
                   className="absolute inset-0 h-full w-full"
                   allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"

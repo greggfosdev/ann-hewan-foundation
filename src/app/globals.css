@@ -58,7 +58,7 @@ html {
 
 /* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid var(--primary);
+  outline: 2px solid var(--ocean-dark);
   outline-offset: 2px;
 }
 

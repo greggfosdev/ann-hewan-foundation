@@ -1,12 +1,9 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Playing Fields Project",
-  description:
-    "Building safe recreational spaces that bring youth together and strengthen Goodwill and surrounding communities.",
-};
+export const metadata = getPageMetadata("/programs/playing-fields");
 
 const stats = [
   { value: "1", label: "Field In Progress" },
@@ -41,6 +38,7 @@ const features = [
 export default function PlayingFieldsPage() {
   return (
     <>
+      <PageJsonLd path="/programs/playing-fields" />
       {/* Hero */}
       <section className="bg-gradient-to-br from-coral/10 to-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -153,6 +151,7 @@ export default function PlayingFieldsPage() {
           <div className="mx-auto mt-12 max-w-4xl">
             <div className="relative aspect-video overflow-hidden rounded-2xl bg-gray-900 shadow-2xl ring-1 ring-gray-900/10">
               <iframe
+                loading="lazy"
                 src="https://player.vimeo.com/video/999982778?h=7b584e31e9"
                 className="absolute inset-0 h-full w-full"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"

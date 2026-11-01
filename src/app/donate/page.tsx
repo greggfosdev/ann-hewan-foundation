@@ -1,14 +1,12 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Donate",
-  description:
-    "Support The Ann Hewan Foundation. 100% of your donation goes directly to programs serving children and families in Goodwill and surrounding communities.",
-};
+export const metadata = getPageMetadata("/donate");
 
 export default function DonatePage() {
   return (
     <div className="bg-cream min-h-screen">
+      <PageJsonLd path="/donate" />
       {/* Hero Header */}
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

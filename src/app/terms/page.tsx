@@ -1,14 +1,12 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Terms of Service",
-  description:
-    "Terms of Service for The Ann Hewan Foundation website. Review the terms governing your use of our website and services.",
-};
+export const metadata = getPageMetadata("/terms");
 
 export default function TermsPage() {
   return (
     <div className="bg-white py-24 sm:py-32">
+      <PageJsonLd path="/terms" />
       <div className="mx-auto max-w-3xl px-6 lg:px-8">
         <h1 className="text-3xl font-bold tracking-tight text-gray-900">
           Terms of Service

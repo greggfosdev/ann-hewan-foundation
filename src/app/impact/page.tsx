@@ -1,14 +1,11 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import { backToSchool2026 } from "@/data/back-to-school";
 import { technologyDonations2026 } from "@/data/technology-donations";
 
-export const metadata: Metadata = {
-  title: "Impact",
-  description:
-    "See the measurable impact of The Ann Hewan Foundation on Goodwill and surrounding communities.",
-};
+export const metadata = getPageMetadata("/impact");
 
 const impactStats = [
   { label: "Children Fed Daily", value: "150+", description: "Through our Breakfast Project", color: "gold" },
@@ -28,6 +25,7 @@ const colorMap = {
 export default function ImpactPage() {
   return (
     <>
+      <PageJsonLd path="/impact" />
       {/* Hero */}
       <section className="bg-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -533,7 +531,7 @@ export default function ImpactPage() {
                       >
                         <video
                           controls
-                          preload="metadata"
+                          preload="none"
                           playsInline
                           poster={video.poster}
                           className="h-full w-full"

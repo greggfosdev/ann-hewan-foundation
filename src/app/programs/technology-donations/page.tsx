@@ -1,19 +1,17 @@
-import type { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 import { technologyDonations2026 as donation } from "@/data/technology-donations";
 
-export const metadata: Metadata = {
-  title: "Technology Donations",
-  description:
-    "In October 2026, The Ann Hewan Foundation delivered computers and iPads donated by a Dallas, Texas partner to three organizations in Jamaica.",
-};
+export const metadata = getPageMetadata("/programs/technology-donations");
 
 export default function TechnologyDonationsPage() {
   const [leadPhoto, ...galleryPhotos] = donation.photos;
 
   return (
     <>
+      <PageJsonLd path="/programs/technology-donations" />
       <section className="bg-cream py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Link

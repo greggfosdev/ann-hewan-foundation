@@ -1,10 +1,8 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "Get Involved",
-  description: "Learn how you can support the Ann Hewan Foundation.",
-};
+export const metadata = getPageMetadata("/get-involved");
 
 const ways = [
   {
@@ -71,6 +69,7 @@ const colorClasses = {
 export default function GetInvolvedPage() {
   return (
     <>
+      <PageJsonLd path="/get-involved" />
       {/* Hero */}
       <section className="bg-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

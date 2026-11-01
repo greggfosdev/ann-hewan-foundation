@@ -1,12 +1,9 @@
-import { Metadata } from "next";
+import { getPageMetadata } from "@/lib/seo";
+import { PageJsonLd } from "@/components/JsonLd";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  title: "The Breakfast Project",
-  description:
-    "Providing nutritious morning meals to over 150 children daily in Goodwill and surrounding communities.",
-};
+export const metadata = getPageMetadata("/programs/breakfast-project");
 
 const stats = [
   { value: "150+", label: "Children Fed Daily" },
@@ -41,6 +38,7 @@ const features = [
 export default function BreakfastProjectPage() {
   return (
     <>
+      <PageJsonLd path="/programs/breakfast-project" />
       {/* Hero */}
       <section className="bg-gradient-to-br from-gold/10 to-cream py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getPageMetadata, SITE_URL } from "@/lib/seo";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -12,47 +13,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "The Ann Hewan Foundation | Uplifting Goodwill & Surrounding Communities",
-    template: "%s | The Ann Hewan Foundation",
-  },
-  description:
-    "A 501(c)(3) foundation supporting education, nutrition, and community development in Goodwill and surrounding communities in St. James, Jamaica.",
-  keywords: [
-    "Jamaica charity",
-    "Caribbean nonprofit",
-    "education",
-    "Goodwill Jamaica",
-    "breakfast program",
-    "St. James Jamaica",
-    "community development",
-  ],
-  openGraph: {
-    title: "The Ann Hewan Foundation",
-    description: "A 501(c)(3) nonprofit supporting education, nutrition, and community development in Goodwill and surrounding communities in St. James, Jamaica.",
-    locale: "en_US",
-    type: "website",
-    siteName: "The Ann Hewan Foundation",
-    url: "https://theannhewanfoundation.org",
-    images: [
-      {
-        url: "/images/hero/children-hero.webp",
-        width: 682,
-        height: 341,
-        alt: "Children from the Goodwill community in Jamaica",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "The Ann Hewan Foundation",
-    description: "A 501(c)(3) nonprofit supporting education, nutrition, and community development in Jamaica.",
-    images: ["/images/hero/children-hero.webp"],
-  },
-  metadataBase: new URL("https://theannhewanfoundation.org"),
+  ...getPageMetadata("/"),
+  metadataBase: new URL(SITE_URL),
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 };
 
