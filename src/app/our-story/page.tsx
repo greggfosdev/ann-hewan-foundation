@@ -303,7 +303,7 @@ export default function OurStoryPage() {
           <div className="mx-auto mt-16 max-w-sm text-center">
             <div className="relative mx-auto h-96 w-72 overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/5">
               <Image
-                src="/images/about/founder.jpg"
+                src="/images/about/founder-enhanced.webp"
                 alt="Edgar Pete Peters - Founder & President"
                 fill
                 className="object-contain"
@@ -400,7 +400,7 @@ export default function OurStoryPage() {
                 <div className="w-full lg:w-2/5 flex-shrink-0">
                   <div className="relative overflow-hidden rounded-2xl shadow-xl ring-1 ring-gray-900/5 aspect-[4/3]">
                     <Image
-                      src="/images/recognition/pete-congressman-soto.webp"
+                      src="/images/recognition/pete-congressman-soto-enhanced.webp"
                       alt="Edgar Pete Peters receiving recognition from Congressman Darren Soto at the Caribbean Heritage Month event"
                       fill
                       className="object-cover"
