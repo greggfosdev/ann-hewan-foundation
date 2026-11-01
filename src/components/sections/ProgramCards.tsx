@@ -99,6 +99,29 @@ const programs: Program[] = [
       </svg>
     ),
   },
+  {
+    name: "Technology Donations",
+    description:
+      "Computers and iPads delivered to three organizations in Jamaica in October 2026, with equipment donated by a partner in Dallas, Texas.",
+    href: "/programs/technology-donations",
+    color: "ocean",
+    icon: (
+      <svg
+        aria-hidden="true"
+        className="h-8 w-8"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4 4.5h16v11H4zM2 19.5h20M9 15.5v4m6-4v4"
+        />
+      </svg>
+    ),
+  },
 ];
 
 export function ProgramCards() {
@@ -117,7 +140,7 @@ export function ProgramCards() {
             address the real needs of Goodwill and surrounding communities.
           </p>
         </div>
-        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 sm:grid-cols-2 lg:max-w-none xl:grid-cols-4">
           {programs.map((program) => {
             const colors = colorClasses[program.color];
             return (
