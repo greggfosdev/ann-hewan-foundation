@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { backToSchool2026 } from "@/data/back-to-school";
+import { technologyDonations2026 } from "@/data/technology-donations";
 
 export const metadata: Metadata = {
   title: "Impact",
@@ -368,7 +369,7 @@ export default function ImpactPage() {
               On the Ground
             </p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Community Events
+              Community Updates
             </h2>
             <p className="mt-4 text-lg text-gray-600">
               Moments from our work in Goodwill and surrounding communities.
@@ -376,6 +377,38 @@ export default function ImpactPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-5xl space-y-20">
+            <div id="technology-donations-2026" className="scroll-mt-24">
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="text-sm font-medium text-gold">{technologyDonations2026.date}</p>
+                <h3 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                  {technologyDonations2026.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-gray-600">
+                  {technologyDonations2026.description}
+                </p>
+              </div>
+              <div className="mt-6 grid items-start gap-6 sm:grid-cols-2">
+                {[technologyDonations2026.photos[0], technologyDonations2026.photos[4]].map((photo) => (
+                  <Image
+                    key={photo.src}
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={photo.width}
+                    height={photo.height}
+                    sizes="(max-width: 640px) 100vw, 50vw"
+                    className="h-auto w-full rounded-xl shadow-sm ring-1 ring-gray-900/5"
+                  />
+                ))}
+              </div>
+              <div className="mt-6 text-center">
+                <Link
+                  href="/programs/technology-donations"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-ocean-dark hover:text-ocean"
+                >
+                  Read about the technology donations <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </div>
+            </div>
             <div>
               <div className="mx-auto max-w-3xl text-center">
                 <p className="text-sm font-medium text-gold">{backToSchool2026.date}</p>

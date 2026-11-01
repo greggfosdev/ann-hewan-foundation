@@ -8,6 +8,19 @@ export const metadata: Metadata = {
 
 const programs = [
   {
+    name: "Technology Donations",
+    description:
+      "In October 2026, we delivered computers and iPads to three organizations in Jamaica, with equipment donated by a partner in Dallas, Texas.",
+    href: "/programs/technology-donations",
+    stats: { value: "3", label: "Organizations Supported · October 2026" },
+    color: "ocean",
+    icon: (
+      <svg aria-hidden="true" className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 4.5h16v11H4zM2 19.5h20M9 15.5v4m6-4v4" />
+      </svg>
+    ),
+  },
+  {
     name: "The Breakfast Project",
     description:
       "Our flagship program ensures that no child in Goodwill and surrounding communities goes to school hungry. We provide nutritious morning meals to over 150 children daily.",

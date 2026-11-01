@@ -5,6 +5,7 @@ const footerNavigation = {
   programs: [
     { name: "The Breakfast Project", href: "/programs/breakfast-project" },
     { name: "Back 2 School", href: "/programs/back-to-school" },
+    { name: "Technology Donations", href: "/programs/technology-donations" },
     { name: "Playing Fields", href: "/programs/playing-fields" },
     { name: "Hurricane Relief", href: "/programs/hurricane-relief" },
   ],
