@@ -419,13 +419,11 @@ export default function OurStoryPage() {
                   {
                     title: "Congressional Record",
                     image: "/images/recognition/congressional-record-enhanced.webp",
-                    original: "/images/recognition/congressional-record.webp",
                     alt: "AI-enhanced, straightened preview of the Congressional Record honoring Edgar Pete Peters for Caribbean Heritage Month",
                   },
                   {
                     title: "Caribbean Heritage Month event letter",
                     image: "/images/recognition/congressional-invitation-enhanced.webp",
-                    original: "/images/recognition/congressional-invitation.webp",
                     alt: "AI-enhanced, straightened preview of Congressman Darren Soto's Caribbean Heritage Month event letter",
                   },
                 ].map((document) => (
@@ -445,18 +443,6 @@ export default function OurStoryPage() {
                         sizes="(max-width: 640px) 100vw, 50vw"
                       />
                     </a>
-                    <figcaption className="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm">
-                      <span className="text-gray-500">AI-enhanced preview</span>
-                      <a
-                        href={document.original}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`View original scan: ${document.title} (opens in a new tab)`}
-                        className="font-medium text-ocean-dark hover:text-ocean"
-                      >
-                        View original scan <span aria-hidden="true">&nearr;</span>
-                      </a>
-                    </figcaption>
                   </figure>
                 ))}
               </div>
