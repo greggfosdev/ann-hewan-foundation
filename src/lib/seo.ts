@@ -66,12 +66,14 @@ export const sitePages: SitePage[] = [
     path: "/our-story",
     title: "Our Story & Ann Hewan's Legacy",
     description: "Meet Ann Hewan, learn about founder Edgar 'Pete' Peters, and discover the community roots of The Ann Hewan Foundation in Goodwill, St. James, Jamaica.",
-    image: "/images/about/ann-hewan-with-founder.webp", imageWidth: 1394, imageHeight: 697,
+    image: "/images/about/ann-hewan-with-founder-enhanced.webp", imageWidth: 1774, imageHeight: 887,
     imageAlt: "Ann Hewan with the founder of the foundation", schemaType: "AboutPage",
   },
   {
     path: "/about", title: "About the Foundation",
     description: "Learn about The Ann Hewan Foundation, a 501(c)(3) nonprofit supporting education, nutrition and community development in Goodwill and nearby Jamaican communities.",
+    image: "/images/about/ann-hewan-with-founder-enhanced.webp", imageWidth: 1774, imageHeight: 887,
+    imageAlt: "Ann Hewan with the founder of the foundation",
     schemaType: "AboutPage",
   },
   {

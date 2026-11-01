@@ -106,7 +106,7 @@ export default function OurStoryPage() {
               {/* Ann Hewan with Founder photo */}
               <div className="relative overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5 aspect-[2/1]">
                 <Image
-                  src="/images/about/ann-hewan-with-founder.webp"
+                  src="/images/about/ann-hewan-with-founder-enhanced.webp"
                   alt="Ann Hewan with the founder of the foundation"
                   fill
                   className="object-cover"

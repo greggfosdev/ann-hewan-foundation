@@ -1,5 +1,6 @@
 import { getPageMetadata } from "@/lib/seo";
 import { PageJsonLd } from "@/components/JsonLd";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = getPageMetadata("/about");
@@ -43,6 +44,16 @@ export default function AboutPage() {
                   those in need. We believe that everyone deserves the opportunity
                   to thrive, and we work tirelessly to make that vision a reality.
                 </p>
+                <div className="mt-6 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-900/5">
+                  <Image
+                    src="/images/about/ann-hewan-with-founder-enhanced.webp"
+                    alt="Ann Hewan with the founder of the foundation"
+                    width={1774}
+                    height={887}
+                    sizes="(max-width: 768px) 100vw, 768px"
+                    className="h-auto w-full"
+                  />
+                </div>
                 <div className="mt-6">
                   <Link
                     href="/our-story"
