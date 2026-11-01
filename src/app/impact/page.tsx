@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { backToSchool2026 } from "@/data/back-to-school";
 
 export const metadata: Metadata = {
   title: "Impact",
@@ -375,6 +376,39 @@ export default function ImpactPage() {
           </div>
 
           <div className="mx-auto mt-16 max-w-5xl space-y-20">
+            <div>
+              <div className="mx-auto max-w-3xl text-center">
+                <p className="text-sm font-medium text-gold">{backToSchool2026.date}</p>
+                <h3 className="mt-2 text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+                  {backToSchool2026.title}
+                </h3>
+                <p className="mt-4 text-base leading-7 text-gray-600">
+                  {backToSchool2026.description}
+                </p>
+              </div>
+              <div className="mt-6 grid grid-cols-2 gap-4 lg:grid-cols-4">
+                {backToSchool2026.photos.slice(0, 4).map((photo) => (
+                  <div key={photo.src} className="aspect-[3/4] overflow-hidden rounded-xl bg-sand shadow-sm ring-1 ring-gray-900/5">
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={1200}
+                      height={1600}
+                      className="h-full w-full object-cover"
+                      sizes="(max-width: 1024px) 50vw, 25vw"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 text-center">
+                <Link
+                  href="/programs/back-to-school#back-to-school-2026"
+                  className="inline-flex items-center gap-2 text-sm font-semibold text-ocean-dark hover:text-ocean"
+                >
+                  View the 2026 event gallery <span aria-hidden="true">&rarr;</span>
+                </Link>
+              </div>
+            </div>
             {[
               {
                 slug: "ice-cream-social-2026",

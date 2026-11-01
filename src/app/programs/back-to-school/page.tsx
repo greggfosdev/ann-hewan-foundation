@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getUpcomingEvent } from "@/data/events";
+import { backToSchool2026 } from "@/data/back-to-school";
 
 // Revalidate daily so the upcoming-event callout expires without a redeploy.
 export const revalidate = 86400;
@@ -164,6 +165,48 @@ export default function BackToSchoolPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* 2026 Back to School Event */}
+      <section id="back-to-school-2026" className="scroll-mt-24 bg-cream py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-sm font-medium text-gold">{backToSchool2026.date}</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              {backToSchool2026.title}
+            </h2>
+            <p className="mt-3 text-sm font-medium text-ocean-dark">
+              {backToSchool2026.location}
+            </p>
+            <p className="mt-4 text-base leading-7 text-gray-600">
+              {backToSchool2026.description}
+            </p>
+          </div>
+          <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-4 lg:grid-cols-4">
+            {backToSchool2026.photos.map((photo) => (
+              <a
+                key={photo.src}
+                href={photo.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`View full photo: ${photo.alt} (opens in a new tab)`}
+                className="aspect-[3/4] overflow-hidden rounded-xl bg-sand shadow-sm ring-1 ring-gray-900/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ocean"
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  width={1200}
+                  height={1600}
+                  className="h-full w-full object-cover"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+              </a>
+            ))}
+          </div>
+          <p className="mt-6 text-center text-sm text-gray-500">
+            Select a photo to view it in full.
+          </p>
         </div>
       </section>
 
