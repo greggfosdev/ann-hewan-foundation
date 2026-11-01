@@ -329,7 +329,7 @@ export default function OurStoryPage() {
                 { name: "Stacie Ann Earle Peters", role: "Treasury" },
                 { name: "Gisela Alvarez", role: "Board Member" },
                 { name: "Egda Avila", role: "Board Member" },
-                { name: "Wendy Williams-Brown", role: "Board Member" },
+                { name: "Jose Ortiz", role: "Board Member" },
                 { name: "Joseph Hamilton", role: "Board Member" },
                 { name: "Wendy Shakespear", role: "Board Member" },
                 { name: "Romeo Mitchell", role: "Board Member" },
