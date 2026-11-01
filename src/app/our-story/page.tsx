@@ -415,24 +415,50 @@ export default function OurStoryPage() {
 
               {/* Documents */}
               <div className="mt-10 grid gap-6 sm:grid-cols-2">
-                <div className="relative overflow-hidden rounded-xl shadow-md ring-1 ring-gray-900/5 aspect-[3/4]">
-                  <Image
-                    src="/images/recognition/congressional-record.webp"
-                    alt="Congressional Record honoring Edgar Pete Peters as a Distinguished Leader in Central Florida for Caribbean Heritage Month"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                </div>
-                <div className="relative overflow-hidden rounded-xl shadow-md ring-1 ring-gray-900/5 aspect-[3/4]">
-                  <Image
-                    src="/images/recognition/congressional-invitation.webp"
-                    alt="Official invitation letter from Congressman Darren Soto for the Caribbean Heritage Month event"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 100vw, 50vw"
-                  />
-                </div>
+                {[
+                  {
+                    title: "Congressional Record",
+                    image: "/images/recognition/congressional-record-enhanced.webp",
+                    original: "/images/recognition/congressional-record.webp",
+                    alt: "AI-enhanced, straightened preview of the Congressional Record honoring Edgar Pete Peters for Caribbean Heritage Month",
+                  },
+                  {
+                    title: "Caribbean Heritage Month event letter",
+                    image: "/images/recognition/congressional-invitation-enhanced.webp",
+                    original: "/images/recognition/congressional-invitation.webp",
+                    alt: "AI-enhanced, straightened preview of Congressman Darren Soto's Caribbean Heritage Month event letter",
+                  },
+                ].map((document) => (
+                  <figure key={document.image}>
+                    <a
+                      href={document.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View full enhanced preview: ${document.title} (opens in a new tab)`}
+                      className="relative block aspect-[3/4] overflow-hidden rounded-xl bg-white shadow-md ring-1 ring-gray-900/5"
+                    >
+                      <Image
+                        src={document.image}
+                        alt={document.alt}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                      />
+                    </a>
+                    <figcaption className="mt-3 flex flex-wrap items-center justify-between gap-2 text-sm">
+                      <span className="text-gray-500">AI-enhanced preview</span>
+                      <a
+                        href={document.original}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`View original scan: ${document.title} (opens in a new tab)`}
+                        className="font-medium text-ocean-dark hover:text-ocean"
+                      >
+                        View original scan <span aria-hidden="true">&nearr;</span>
+                      </a>
+                    </figcaption>
+                  </figure>
+                ))}
               </div>
             </div>
           </div>
