@@ -37,7 +37,7 @@ export function Header() {
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
-              src="/images/logo.webp"
+              src="/images/brand/logo-2026-transparent.webp"
               alt="The Ann Hewan Foundation"
               width={48}
               height={48}

@@ -19,7 +19,7 @@ export function OrganizationJsonLd() {
         name: SITE_NAME,
         alternateName: "Ann Hewan Foundation",
         url: SITE_URL,
-        logo: `${SITE_URL}/images/logo.webp`,
+        logo: `${SITE_URL}/images/brand/logo-2026-transparent.webp`,
         description: "A 501(c)(3) nonprofit supporting education, nutrition, and community development in Goodwill and surrounding communities in St. James, Jamaica.",
         foundingDate: "2010",
         founder: {

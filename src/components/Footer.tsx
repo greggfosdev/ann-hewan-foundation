@@ -116,7 +116,7 @@ export function Footer() {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <Image
-                src="/images/logo.webp"
+                src="/images/brand/logo-2026-transparent.webp"
                 alt="The Ann Hewan Foundation"
                 width={56}
                 height={56}
@@ -126,6 +126,9 @@ export function Footer() {
                 Ann Hewan Foundation
               </span>
             </div>
+            <p className="text-sm font-semibold text-gray-900">
+              Empowering Communities. Changing Lives.
+            </p>
             <p className="text-sm leading-6 text-gray-600">
               A 501(c)(3) nonprofit uplifting Goodwill and surrounding communities in St.
               James, Jamaica through education, nutrition, and sustainable

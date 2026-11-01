@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Brushstroke } from "@/components/ui/BrandAccents";
 
 interface HeroProps {
   title?: string;
@@ -61,8 +62,11 @@ export function Hero({
             {title}
           </h1>
 
-          {/* Decorative line */}
-          <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-to-r from-gold to-coral" />
+          <p className="mt-4 text-base font-medium tracking-wide text-gray-700 sm:text-lg">
+            Empowering Communities. Changing Lives.
+          </p>
+
+          <Brushstroke />
 
           {/* Subtitle */}
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
